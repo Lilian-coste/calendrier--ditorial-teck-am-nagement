@@ -49,10 +49,15 @@
   .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:middle}
 
   /* BOARD */
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+  /* align-items:start — les stories sont en 9:16 et les posts en 4:5, sans ça les
+     cartes courtes s'étirent à la hauteur de la plus grande et laissent un vide. */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;align-items:start}
   .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
-  .thumb{aspect-ratio:4/5;background:#e9eff7 center/cover no-repeat;position:relative;cursor:pointer}
-  .thumb.ph{display:flex;align-items:center;justify-content:center;color:#9aa2b1;font-size:13px;text-align:center;padding:16px;flex-direction:column;gap:6px}
+  /* Aucune vignette n'est recadrée : chaque visuel garde ses vraies proportions
+     (post 4:5, story 9:16…), pour que le client voie exactement ce qui sortira. */
+  .thumb{background:#e9eff7;position:relative;cursor:pointer;line-height:0}
+  .thumb img{width:100%;height:auto;display:block}
+  .thumb.ph{aspect-ratio:4/5;line-height:1.5;display:flex;align-items:center;justify-content:center;color:#9aa2b1;font-size:13px;text-align:center;padding:16px;flex-direction:column;gap:6px}
   .num{position:absolute;top:10px;left:10px;background:rgba(6,83,168,.9);color:#fff;font-size:12px;font-weight:700;border-radius:8px;padding:3px 8px;backdrop-filter:blur(4px)}
   .pill{position:absolute;top:10px;right:10px;font-size:11px;font-weight:700;border-radius:999px;padding:4px 10px;color:#fff}
   .cbody{padding:14px 15px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
@@ -504,7 +509,7 @@ function renderBoard(){
     const bl=bodyLen(p.cap), bad=bl<150||bl>400;
     const tag = `<span class="num" style="background:${ty.color}">${ty.icon} ${ty.short} #${p.num}</span>`;
     const thumb = p.img
-      ? `<div class="thumb" style="${bg(p)}" onclick="openModal('${p.id}')">${tag}<span class="pill" style="background:${stt.color}">${stt.label}</span></div>`
+      ? `<div class="thumb" onclick="openModal('${p.id}')"><img src="${p.img}" alt="">${tag}<span class="pill" style="background:${stt.color}">${stt.label}</span></div>`
       : `<div class="thumb ph" onclick="openModal('${p.id}')">${tag}<span class="pill" style="background:${stt.color}">${stt.label}</span><span>${p.phLabel||'🖼️ Photo à lier'}</span></div>`;
     const warn = p.warn?`<div class="warn">⚠️ ${esc(p.warn)}</div>`:"";
     // Le calibrage 150-400 caractères ne concerne que les légendes de posts photo.
@@ -537,7 +542,10 @@ function setHeure(id,v){ state[id].heure=v; save(); if(view==='cal')renderCal();
 function openModal(id){
   const p=POSTS.find(x=>x.id===id), s=st(p), stt=STATUS[s.status], ty=TYPES[p.type], bl=bodyLen(p.cap);
   const mImg=document.getElementById("mImg");
-  mImg.style.cssText = p.img?bg(p):"background:#e9eff7";
+  // En grand aussi, le visuel est montré en entier (contain sur fond navy) : le
+  // client doit voir exactement ce qui sortira, pas une version recadrée.
+  const fit = `${bg(p)};background-size:contain;background-repeat:no-repeat;background-position:center;background-color:#0A1F44;min-height:70vh`;
+  mImg.style.cssText = p.img?fit:"background:#e9eff7";
   setH(mImg, p.img?"":"<div style='display:flex;height:100%;align-items:center;justify-content:center;color:#9aa2b1'>"+(p.phLabel||"Photo à lier")+"</div>");
   document.getElementById("mAngle").textContent = ty.icon+" "+ty.label+" #"+p.num+" · "+p.angle;
   setH(document.getElementById("mMeta"), `<span class="pill" style="position:static;background:${ty.color}">${ty.short}</span> <span class="pill" style="position:static;background:${stt.color}">${stt.label}</span> <span>${s.date||"non planifié"}${s.heure?" · "+s.heure:""}</span>`);
