@@ -378,7 +378,7 @@ Belle fête à toutes et à tous… Avec les chaleurs record de cet été, n'oub
 Photo du chantier : Goguet Vinet.` },
 
   { id:"sliste", type:"story", num:4, img:"stories-maquettes/S-LISTE-habiller-votre-pergola.jpg", angle:"Habiller votre pergola (4 équipements)",
-    status:"apublier", date:"2026-07-20", heure:"18h00",
+    status:"apublier", date:"2026-08-20", heure:"19h00",
     cap:`HABILLER VOTRE PERGOLA, dans chaque détail.
 
 LES VOILAGES · En lin ou en coton, noués aux poteaux, à déplier quand le soleil tourne.
@@ -443,7 +443,7 @@ Ici, nous avons aussi construit la terrasse. Un extérieur se pense dans son ens
 Chaque pergola est dessinée pour une façade, une orientation, un jardin. C'est ce qui fait qu'elle semble avoir toujours été là.` },
 
   { id:"s8",  type:"story", num:13, img:"stories-maquettes/S8-douche-claustra.jpg", angle:"Une douche dehors, sans être vu",
-    status:"apublier", date:"2026-08-20", heure:"19h00",
+    status:"apublier", date:"2026-07-20", heure:"18h00",
     cap:`UNE DOUCHE DEHORS, SANS ÊTRE VU
 
 Le claustra filtre le regard sans jamais enfermer l'espace. Il crée l'intimité d'une douche extérieure, tout en gardant la structure ouverte et aérée.` },
@@ -463,7 +463,7 @@ const STATUS = {
   aproduire:{label:"À produire", color:"#7c5cbf"},
 };
 
-const KEY="teck_ig_cal_v3";
+const KEY="teck_ig_cal_v4";
 let state = JSON.parse(localStorage.getItem(KEY) || "{}");
 POSTS.forEach(p=>{ if(!state[p.id]) state[p.id]={status:p.status, date:p.date||"", heure:p.heure||""}; });
 function save(){ localStorage.setItem(KEY, JSON.stringify(state)); }

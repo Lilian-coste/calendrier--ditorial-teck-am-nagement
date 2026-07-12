@@ -34,7 +34,7 @@ Aucun format ne tombe le même jour qu'un autre, pour ne pas se cannibaliser.
 | lun. 13 juil. · 18h | Le soleil s'arrête où vous décidez | ✅ Maquette prête |
 | **mar. 14 juil. · 11h** | Bon 14 juillet (**exception ponctuelle**) | ✅ Maquette prête |
 | jeu. 16 juil. · 19h | **Avis client · Jean-Luc Vinet** | ⏳ Carte témoignage à faire |
-| lun. 20 juil. · 18h | Habiller votre pergola (4 équipements) | ✅ Maquette prête |
+| lun. 20 juil. · 18h | Une douche dehors, sans être vu | ✅ Maquette prête |
 | jeu. 23 juil. · 19h | Un bois qui ne demande aucun entretien | ✅ Prépare le Reel #3 du lendemain |
 | lun. 27 juil. · 18h | Le détail qu'on ne voit qu'au soleil | ✅ Maquette prête |
 | jeu. 30 juil. · 19h | L'ombre n'est pas l'obscurité | ✅ Prépare le Reel #7 du lendemain |
@@ -43,7 +43,7 @@ Aucun format ne tombe le même jour qu'un autre, pour ne pas se cannibaliser.
 | lun. 10 août · 18h | Tout se joue au millimètre | ✅ Maquette prête |
 | jeu. 13 août · 19h | Teck Aménagement, ce n'est pas que la pergola | ✅ Maquette prête |
 | lun. 17 août · 18h | Elle ne s'ajoute pas à la maison, elle la prolonge | ✅ Maquette prête |
-| jeu. 20 août · 19h | Une douche dehors, sans être vu | ✅ Maquette prête |
+| jeu. 20 août · 19h | Habiller votre pergola (4 équipements) | ✅ Maquette prête |
 | lun. 24 août · 18h | Nos pergolas n'ont pas de limite de longueur | ✅ Maquette prête |
 
 > Les 2 stories avis tombent un jeudi. Les autres jeudis sont pris par les stories qui préparent le reel du vendredi, parce que l'enchaînement story → reel est plus fort éditorialement. Dès que d'autres cartes témoignage seront prêtes, on reviendra à une alternance stricte un jeudi sur deux.
