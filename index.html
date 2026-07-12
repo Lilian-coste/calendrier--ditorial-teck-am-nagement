@@ -81,13 +81,16 @@
   .tchip .ph2,.ev .ph2{width:26px;height:26px;border-radius:6px;background:#dbe4f2;flex:none}
   .cal{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
   .dow{font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;text-align:center;padding-bottom:2px}
-  .day{background:var(--panel);border:1px solid var(--line);border-radius:11px;min-height:96px;padding:6px;display:flex;flex-direction:column;gap:5px}
+  .day{background:var(--panel);border:1px solid var(--line);border-radius:11px;min-height:110px;padding:6px;display:flex;flex-direction:column;gap:5px}
   .day.out{background:#eef1f6;opacity:.5}
   .day.today{border-color:var(--blue);box-shadow:0 0 0 2px rgba(6,83,168,.18)}
   .day.drop{border-color:var(--blue);background:var(--blue-xl)}
   .dn{font-size:12px;color:var(--muted);font-weight:700}
   .ev{display:flex;align-items:center;gap:6px;background:var(--fog);border:1px solid var(--line);border-radius:8px;padding:3px 5px;font-size:11.5px;font-weight:600;cursor:grab}
   .ev .x{margin-left:auto;color:var(--muted);cursor:pointer;font-weight:700}
+  .evtxt{display:flex;flex-direction:column;gap:2px;min-width:0}
+  .fmt{display:inline-block;color:#fff;font-size:9.5px;font-weight:800;letter-spacing:.05em;border-radius:5px;padding:1px 5px;width:fit-content}
+  .tchip .evtxt{flex-direction:row;align-items:center;gap:6px}
 
   /* MODAL */
   .ov{position:fixed;inset:0;background:rgba(30,25,18,.55);backdrop-filter:blur(3px);display:none;align-items:center;justify-content:center;padding:20px;z-index:50}
@@ -110,7 +113,7 @@
     <div class="logo">T</div>
     <div>
       <h1>Calendrier éditorial Instagram</h1>
-      <div class="sub">Teck Aménagement · 8 posts · glisse-dépose pour planifier, clique une carte pour la voir en grand</div>
+      <div class="sub">Teck Aménagement · 8 posts photo · 5 reels · 14 stories · glisse-dépose pour planifier, clique une carte pour la voir en grand</div>
     </div>
   </div>
 </header>
@@ -132,7 +135,7 @@
 
   <div id="cal" class="hidden">
     <div class="tray">
-      <h3>À planifier — glisse un post sur une date</h3>
+      <h3>À planifier — glisse un contenu sur une date</h3>
       <div class="items" id="tray"></div>
     </div>
     <div class="calhead">
@@ -168,10 +171,18 @@ function setH(el,h){ el["inner"+"HTML"]=h; }
 function esc(s){ return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
 
 const SIG = "Teck Aménagement... Une nouvelle gamme de pergolas pour sublimer votre extérieur 🖊️";
-const CREDIT = "📸 Merci @gabrielle pour la photo";
+const CREDIT = "📸 Merci @gabrielle_voinot pour la photo";
+const CREDIT_M = "📸 Merci @mishka_vision pour la photo";
+
+// Chaque contenu porte un `type` : post photo (mardi), reel (vendredi), story (lundi + jeudi).
+const TYPES = {
+  post:  {label:"Post photo", short:"POST",  icon:"📷", color:"var(--blue)"},
+  reel:  {label:"Reel",       short:"REEL",  icon:"🎬", color:"#7c5cbf"},
+  story: {label:"Story",      short:"STORY", icon:"⚡", color:"#2f7d4f"},
+};
 
 const POSTS = [
-  { id:"p2", num:1, img:"assets/02-daybed-bois-exotique.jpg", angle:"Daybed · Bois exotique sans entretien",
+  { id:"p2", type:"post", num:1, img:"assets/02-daybed-bois-exotique.jpg", angle:"Daybed · Bois exotique sans entretien",
     status:"planifie", date:"2026-07-10", heure:"19h00",
     cap:`Et si vous n'aviez plus jamais besoin d'entretenir votre bois chez vous ?
 
@@ -185,7 +196,7 @@ ${CREDIT}
 
 #TeckAménagement #BoisExotique #SansEntretien #TerrasseBois #Provence` },
 
-  { id:"p3", num:3, img:"assets/03-pergola-chaleur.jpg", angle:"Pergola · Confort et fraîcheur",
+  { id:"p3", type:"post", num:3, img:"assets/03-pergola-chaleur.jpg", angle:"Pergola · Confort et fraîcheur",
     status:"planifie", date:"2026-07-21", heure:"18h00",
     cap:`Sous cette pergola, la chaleur de l'été n'entre pas.
 
@@ -202,7 +213,7 @@ ${CREDIT}
 
 #TeckAménagement #PergolaSurMesure #ConfortExtérieur #Ombrage #Provence` },
 
-  { id:"p4", num:2, img:"assets/_LVM1735.jpg", angle:"Déjeuner à l'ombre en famille",
+  { id:"p4", type:"post", num:2, img:"assets/_LVM1735.jpg", angle:"Déjeuner à l'ombre en famille",
     status:"planifie", date:"2026-07-14", heure:"18h00",
     cap:`À midi, la table est mise à l'ombre et le déjeuner peut durer.
 
@@ -214,11 +225,11 @@ Cette nappe à carreaux a ce petit air d'été qui ne vieillit jamais.
 
 ${SIG}
 
-${CREDIT}
+${CREDIT_M}
 
 #TeckAménagement #PergolaSurMesure #ArtDeRecevoir #TerrasseOmbragée #Provence` },
 
-  { id:"p5", num:7, img:"assets/_LVM1690.jpg", angle:"Coin d'ombre au bord de la piscine",
+  { id:"p5", type:"post", num:7, img:"assets/_LVM1690.jpg", angle:"Coin d'ombre au bord de la piscine",
     status:"planifie", date:"2026-08-18", heure:"18h00",
     cap:`Après la baignade, l'ombre vous attend à deux pas de l'eau.
 
@@ -228,11 +239,11 @@ Le temps d'un goûter pour les enfants ou d'un jus de fruit à l'ombre, l'été 
 
 ${SIG}
 
-${CREDIT}
+${CREDIT_M}
 
 #TeckAménagement #PergolaSurMesure #Piscine #ConfortExtérieur #Provence` },
 
-  { id:"p6", num:4, img:"assets/_LVM1674.jpg", angle:"S'intègre à toute maison",
+  { id:"p6", type:"post", num:4, img:"assets/_LVM1674.jpg", angle:"S'intègre à toute maison",
     status:"planifie", date:"2026-07-28", heure:"18h00",
     cap:`Peur qu'une pergola dénature votre maison ? C'est tout l'inverse.
 
@@ -246,7 +257,7 @@ ${CREDIT}
 
 #TeckAménagement #PergolaSurMesure #ArchitectureExtérieure #AménagementExtérieur #Provence` },
 
-  { id:"p7", num:6, img:"assets/07-kar-villa-artdeco.jpg", angle:"Personnalisation / sur-mesure",
+  { id:"p7", type:"post", num:6, img:"assets/07-kar-villa-artdeco.jpg", angle:"Personnalisation / sur-mesure",
     status:"planifie", date:"2026-08-11", heure:"18h00",
     cap:`Aucune de nos pergolas ne ressemble à une autre.
 
@@ -260,11 +271,11 @@ ${CREDIT}
 
 #TeckAménagement #PergolaSurMesure #BoisExotique #DesignExtérieur #Provence` },
 
-  { id:"p8", num:5, img:"assets/08-maison-claustra.jpg", angle:"Focus claustra",
+  { id:"p8", type:"post", num:5, img:"assets/08-maison-claustra.jpg", angle:"Focus claustra",
     status:"planifie", date:"2026-08-04", heure:"18h00",
     cap:`Le claustra, c'est ce détail qui fait toute la différence.
 
-Ces fines lames de bois filtrent le regard et la lumière sans jamais enfermer l'espace.
+Ces fins carrelets de bois filtrent le regard et la lumière sans jamais enfermer l'espace.
 
 Elles créent de l'intimité, ici autour d'une douche extérieure, tout en gardant la structure ouverte et aérée.
 
@@ -276,9 +287,167 @@ ${CREDIT}
 
 #TeckAménagement #Claustra #BriseVue #BoisExotique #Provence` },
 
-  { id:"p9", num:8, img:null, phLabel:"🎬 Vidéo / 3D à produire", angle:"À produire · Vidéo ou 3D",
-    status:"aproduire", date:"2026-08-25", heure:"18h00",
-    cap:`Légende à écrire une fois le visuel prêt (vidéo ou rendu 3D).` },
+  { id:"p9", type:"post", num:8, img:"assets/09-transat.jpg", angle:"Contre-plongée · Rêver du bois",
+    status:"planifie", date:"2026-08-25", heure:"18h00",
+    warn:"",
+    cap:`Et si c'était vous, allongé sur votre transat, le regard levé vers le bois de votre pergola ?
+
+Des carrelets de bois exotique qui découpent le ciel et filtrent le soleil.
+La lumière glisse entre eux et dessine des ombres qui bougent avec les heures.
+On lève les yeux et le temps ralentit.
+
+« Je ne peux que vous recommander ces pergolas de très bonne qualité et au design juste DE FOLIE !!! »
+Adrienne Riera, Nîmes
+
+${SIG}
+
+${CREDIT_M}
+
+#TeckAménagement #PergolaBois #BoisExotique #Provence #ArtDeVivre` },
+
+  /* ---------- REELS · un par vendredi, 19h00 · scripts complets dans scripts-reels.md ---------- */
+  { id:"r1", type:"reel", num:1, img:"", phLabel:"🎬 Vidéo déjà tournée", angle:"La vidéo du thermomètre",
+    status:"aproduire", date:"2026-07-17", heure:"19h00",
+    cap:`Question prospect : « Est-ce qu'une pergola en bois rafraîchit vraiment ? »
+
+La vidéo est déjà tournée par Franck, avec le thermomètre. Il n'y a plus qu'à la monter.
+C'est la même vidéo qui sert de preuve incrustée dans le Reel #3.
+
+⚠️ Le chiffre des -13° ne doit jamais être cité sans cette preuve à l'écran.` },
+
+  { id:"r3", type:"reel", num:3, img:"", phLabel:"🎬 À tourner", angle:"Le bois dehors, ça s'entretient tout le temps ?",
+    status:"aproduire", date:"2026-07-24", heure:"19h00",
+    cap:`Question prospect : « Le bois en extérieur, il faut l'entretenir sans arrêt ? »
+
+Réponse : « C'est vrai pour beaucoup de bois, mais pas pour le nôtre. »
+Grâce à une solution qui nous est propre et que, à notre connaissance, personne d'autre ne détient dans le sud de la France.
+Chute sur la preuve du test (-13° à l'ombre), incrustée en bulle avec un sous-titre.
+
+⏳ À valider avec Franck : « Nous vous répondrons dans l'heure. »` },
+
+  { id:"r7", type:"reel", num:7, img:"", phLabel:"🎬 À tourner", angle:"Une pergola, ça va assombrir ma maison ?",
+    status:"aproduire", date:"2026-07-31", heure:"19h00",
+    cap:`Question prospect : « Vais-je perdre en lumière, surtout l'hiver ? »
+
+Réponse : la structure est ajourée, la lumière passe entre les carrelets. Et l'hiver, le soleil est bas et entre sous la pergola.
+
+✅ Sourcé par un vrai avis Google (Mathieu, 5★) : « La luminosité reste la même à l'intérieur de la maison tout en protégeant ma terrasse du soleil. » → à incruster à l'écran.` },
+
+  { id:"r6", type:"reel", num:6, img:"", phLabel:"🎬 À tourner · Franck face caméra", angle:"N'installez pas de pergola avant d'avoir entendu ça",
+    status:"aproduire", date:"2026-08-07", heure:"19h00",
+    cap:`Question prospect : « Comment réussir mon projet de pergola ? »
+
+Franck face caméra, les 4 détails qui décident de la réussite d'un projet.
+
+Tournage : micro-cravate indispensable (surtout dehors), sinon tourner dans son bureau. Ton naturel, comme s'il parlait à des clients, sourire naturel et énergie enthousiaste.` },
+
+  { id:"r2", type:"reel", num:2, img:"", phLabel:"🎬 En attente de validation", angle:"Le geste (atelier)",
+    status:"atrancher", date:"2026-08-14", heure:"19h00",
+    warn:"Bloqué tant que Franck n'a pas confirmé que les équipes façonnent réellement le bois (mesure, découpe, ajustage) avant la pose.",
+    cap:`Question prospect : « Est-ce que c'est vraiment du sur-mesure ? »
+
+Le bois qui passe entre les mains de l'atelier, le millimètre, le geste.
+
+⏳ Programmé en dernier pour laisser le temps de valider le process avec Franck.` },
+
+  /* ---------- STORIES · lundi + jeudi · maquettes prêtes dans stories-maquettes/ ---------- */
+  { id:"s1",  type:"story", num:1,  img:"stories-maquettes/S1-voilages.jpg", angle:"Le soleil s'arrête où vous décidez",
+    status:"apublier", date:"2026-07-13", heure:"18h00",
+    cap:`LE SOLEIL S'ARRÊTE OÙ VOUS DÉCIDEZ
+
+Des voilages de lin ou de coton, noués aux poteaux. On les déplie quand le soleil tourne et le coin devient intime. Au-dessus, une guirlande accrochée aux carrelets, pour les soirées qui s'étirent.` },
+
+  { id:"s14j", type:"story", num:2, img:"stories-maquettes/S-14JUILLET.jpg", angle:"Bon 14 juillet (exception ponctuelle)",
+    status:"apublier", date:"2026-07-14", heure:"11h00",
+    cap:`BON 14 JUILLET
+
+Belle fête à toutes et à tous… Avec les chaleurs record de cet été, n'oubliez pas de vous mettre à l'ombre !` },
+
+  { id:"s2",  type:"story", num:3, img:"", phLabel:"⭐ Carte témoignage à faire", angle:"Avis client · Jean-Luc Vinet",
+    status:"aproduire", date:"2026-07-16", heure:"19h00",
+    warn:"La coupe […] est obligatoire : l'avis original contient une pique contre les concurrents.",
+    cap:`« Nous en avions rêvé, Teck Aménagement l'a fait ! »
+
+« Pour nous un gros projet, terrasse, salon enterré, pergola… et donc un tas de craintes. Dès la première visite, Franck Joncheray assure et nous rassure ! Rigueur, expertise, créativité sont au rendez-vous. […] Une équipe qui dit ce qu'elle fait et fait ce qu'elle dit. »
+
+Photo du chantier : Goguet Vinet.` },
+
+  { id:"sliste", type:"story", num:4, img:"stories-maquettes/S-LISTE-habiller-votre-pergola.jpg", angle:"Habiller votre pergola (4 équipements)",
+    status:"apublier", date:"2026-07-20", heure:"18h00",
+    cap:`HABILLER VOTRE PERGOLA, dans chaque détail.
+
+LES VOILAGES · En lin ou en coton, noués aux poteaux, à déplier quand le soleil tourne.
+LA GUIRLANDE · Accrochée aux carrelets, pour les soirées qui s'étirent.
+LE CLAUSTRA · Il filtre le regard sans jamais enfermer l'espace.
+L'ÉCLAIRAGE · Pensé et réglé avec vous, jusqu'à la tombée de la nuit.` },
+
+  { id:"s9",  type:"story", num:5, img:"stories-maquettes/S9-aucun-entretien.jpg", angle:"Un bois qui ne demande aucun entretien",
+    status:"apublier", date:"2026-07-23", heure:"19h00",
+    cap:`UN BOIS QUI NE DEMANDE AUCUN ENTRETIEN
+
+Notre bois exotique garde sa teinte et sa chaleur au fil des saisons, sans le poncer ni l'huiler.
+
+C'est ça, choisir Teck Aménagement : choisir le naturel et l'excellence sans contrainte.
+
+→ Placée la veille du Reel #3 sur l'entretien du bois.` },
+
+  { id:"s3",  type:"story", num:6, img:"stories-maquettes/S3-detail-au-soleil.jpg", angle:"Le détail qu'on ne voit qu'au soleil",
+    status:"apublier", date:"2026-07-27", heure:"18h00",
+    cap:`LE DÉTAIL QU'ON NE VOIT QU'AU SOLEIL
+
+La finition de nos structures est un sable texturé. Au soleil, de fines paillettes d'aluminium l'illuminent et lui donnent toute sa profondeur.` },
+
+  { id:"sombre", type:"story", num:7, img:"stories-maquettes/S-OMBRE.jpg", angle:"L'ombre n'est pas l'obscurité",
+    status:"apublier", date:"2026-07-30", heure:"19h00",
+    cap:`L'OMBRE N'EST PAS L'OBSCURITÉ
+
+Nos pergolas ne sont pas un toit plein. La lumière passe entre les carrelets, dessine ses ombres et votre maison garde sa clarté.
+
+→ Placée la veille du Reel #7 sur la luminosité.` },
+
+  { id:"s4",  type:"story", num:8, img:"stories-maquettes/S4-effet-feutre.jpg", angle:"Le moment où la structure devient un lieu",
+    status:"apublier", date:"2026-08-03", heure:"18h00",
+    cap:`LE MOMENT OÙ LA STRUCTURE DEVIENT UN LIEU
+
+Dès que les carrelets de bois arrivent, la lumière se tamise et l'espace devient plus feutré, plus cosy. C'est là que la pergola cesse d'être une structure.` },
+
+  { id:"s10", type:"story", num:9, img:"", phLabel:"⭐ Carte témoignage à faire", angle:"Avis client · Hélène Gruter",
+    status:"aproduire", date:"2026-08-06", heure:"19h00",
+    cap:`« Écoute, conseils, réactivité, travail impeccable. »
+
+« Franck et son équipe sont exceptionnels. Un immense merci à eux de nous avoir si bien accompagnés dans notre projet d'aménagement extérieur autour de notre piscine. »
+
+Photo du chantier : Gruter.` },
+
+  { id:"smilli", type:"story", num:10, img:"stories-maquettes/S-MILLIMETRE.jpg", angle:"Tout se joue au millimètre",
+    status:"apublier", date:"2026-08-10", heure:"18h00",
+    cap:`TOUT SE JOUE AU MILLIMÈTRE
+
+Avant la première pièce de bois, tout est calculé pour que la structure tombe juste, au cordeau. C'est invisible une fois posée et c'est pourtant ce qui fait toute la différence, comme pour ce projet.` },
+
+  { id:"s5",  type:"story", num:11, img:"stories-maquettes/S5-amenagement-densemble.jpg", angle:"Teck Aménagement, ce n'est pas que la pergola",
+    status:"apublier", date:"2026-08-13", heure:"19h00",
+    cap:`TECK AMÉNAGEMENT, CE N'EST PAS QUE LA PERGOLA
+
+Ici, nous avons aussi construit la terrasse. Un extérieur se pense dans son ensemble : la plage de piscine, les espaces cosy et partout le charme du bois.` },
+
+  { id:"s7",  type:"story", num:12, img:"stories-maquettes/S7-prolonge-la-maison.jpg", angle:"Elle ne s'ajoute pas à la maison, elle la prolonge",
+    status:"apublier", date:"2026-08-17", heure:"18h00",
+    cap:`ELLE NE S'AJOUTE PAS À LA MAISON, ELLE LA PROLONGE
+
+Chaque pergola est dessinée pour une façade, une orientation, un jardin. C'est ce qui fait qu'elle semble avoir toujours été là.` },
+
+  { id:"s8",  type:"story", num:13, img:"stories-maquettes/S8-douche-claustra.jpg", angle:"Une douche dehors, sans être vu",
+    status:"apublier", date:"2026-08-20", heure:"19h00",
+    cap:`UNE DOUCHE DEHORS, SANS ÊTRE VU
+
+Le claustra filtre le regard sans jamais enfermer l'espace. Il crée l'intimité d'une douche extérieure, tout en gardant la structure ouverte et aérée.` },
+
+  { id:"slimite", type:"story", num:14, img:"stories-maquettes/S-SANS-LIMITE.jpg", angle:"Nos pergolas n'ont pas de limite de longueur",
+    status:"apublier", date:"2026-08-24", heure:"18h00",
+    cap:`NOS PERGOLAS N'ONT PAS DE LIMITE DE LONGUEUR
+
+La structure se dessine à la dimension de votre projet, aussi longue qu'il le faut. Ici, elle protège toute une cuisine d'été du soleil et de la chaleur des Bouches-du-Rhône.` },
 ];
 
 const STATUS = {
@@ -289,7 +458,7 @@ const STATUS = {
   aproduire:{label:"À produire", color:"#7c5cbf"},
 };
 
-const KEY="teck_ig_cal_v2";
+const KEY="teck_ig_cal_v3";
 let state = JSON.parse(localStorage.getItem(KEY) || "{}");
 POSTS.forEach(p=>{ if(!state[p.id]) state[p.id]={status:p.status, date:p.date||"", heure:p.heure||""}; });
 function save(){ localStorage.setItem(KEY, JSON.stringify(state)); }
@@ -305,34 +474,47 @@ function toast(m){ const t=document.getElementById("toast"); t.textContent=m; t.
 function copy(text){ navigator.clipboard.writeText(text).then(()=>toast("Légende copiée ✓")).catch(()=>toast("Copie impossible")); }
 function bg(p){ return p.img ? `background-image:url('${p.img}')` : ""; }
 
-let filter="all";
+let filter="all";      // filtre par statut
+let tFilter="all";     // filtre par format (post / reel / story)
+function shown(){ return POSTS.filter(p=>(tFilter==="all"||p.type===tFilter) && (filter==="all"||st(p).status===filter)); }
 function renderStats(){
-  const c={all:POSTS.length,apublier:0,planifie:0,publie:0,atrancher:0,aproduire:0};
-  POSTS.forEach(p=>c[st(p).status]++);
+  const c={apublier:0,planifie:0,publie:0,atrancher:0,aproduire:0};
+  const t={post:0,reel:0,story:0};
+  POSTS.forEach(p=>{ c[st(p).status]++; t[p.type]++; });
   setH(document.getElementById("stats"),
-    `<div class="stat"><b>${c.all}</b> posts</div>`+
+    Object.keys(TYPES).map(k=>`<div class="stat">${TYPES[k].icon} ${TYPES[k].label} <b>${t[k]}</b></div>`).join("")+
     Object.keys(STATUS).map(k=>`<div class="stat"><span class="dot" style="background:${STATUS[k].color}"></span>${STATUS[k].label} <b>${c[k]}</b></div>`).join(""));
 }
 function renderChips(){
-  const opts=[["all","Tous"],...Object.keys(STATUS).map(k=>[k,STATUS[k].label])];
-  setH(document.getElementById("chips"), opts.map(([k,l])=>{
-    const dot = k==="all"?"":`<span class="dot" style="background:${STATUS[k].color}"></span>`;
-    return `<div class="chip ${filter===k?'on':''}" onclick="filter='${k}';renderBoard()">${dot}${l}</div>`;
-  }).join(""));
+  const types=[["all","Tous les formats"],...Object.keys(TYPES).map(k=>[k,TYPES[k].icon+" "+TYPES[k].label])];
+  const opts=[["all","Tous les statuts"],...Object.keys(STATUS).map(k=>[k,STATUS[k].label])];
+  setH(document.getElementById("chips"),
+    types.map(([k,l])=>`<div class="chip ${tFilter===k?'on':''}" onclick="tFilter='${k}';renderBoard()">${l}</div>`).join("")+
+    `<span style="width:14px"></span>`+
+    opts.map(([k,l])=>{
+      const dot = k==="all"?"":`<span class="dot" style="background:${STATUS[k].color}"></span>`;
+      return `<div class="chip ${filter===k?'on':''}" onclick="filter='${k}';renderBoard()">${dot}${l}</div>`;
+    }).join(""));
 }
 function renderBoard(){
   renderChips();
   const g=document.getElementById("grid"); g.textContent="";
-  POSTS.filter(p=>filter==="all"||st(p).status===filter).sort((a,b)=>(st(a).date||"9999-99-99").localeCompare(st(b).date||"9999-99-99")).forEach(p=>{
-    const s=st(p), stt=STATUS[s.status], bl=bodyLen(p.cap), bad=bl<150||bl>400;
+  shown().sort((a,b)=>(st(a).date||"9999-99-99").localeCompare(st(b).date||"9999-99-99")).forEach(p=>{
+    const s=st(p), stt=STATUS[s.status], ty=TYPES[p.type];
+    const bl=bodyLen(p.cap), bad=bl<150||bl>400;
+    const tag = `<span class="num" style="background:${ty.color}">${ty.icon} ${ty.short} #${p.num}</span>`;
     const thumb = p.img
-      ? `<div class="thumb" style="${bg(p)}" onclick="openModal('${p.id}')"><span class="num">#${p.num}</span><span class="pill" style="background:${stt.color}">${stt.label}</span></div>`
-      : `<div class="thumb ph" onclick="openModal('${p.id}')"><span class="num">#${p.num}</span><span class="pill" style="background:${stt.color}">${stt.label}</span><span>${p.phLabel||'🖼️ Photo à lier'}</span></div>`;
+      ? `<div class="thumb" style="${bg(p)}" onclick="openModal('${p.id}')">${tag}<span class="pill" style="background:${stt.color}">${stt.label}</span></div>`
+      : `<div class="thumb ph" onclick="openModal('${p.id}')">${tag}<span class="pill" style="background:${stt.color}">${stt.label}</span><span>${p.phLabel||'🖼️ Photo à lier'}</span></div>`;
     const warn = p.warn?`<div class="warn">⚠️ ${esc(p.warn)}</div>`:"";
+    // Le calibrage 150-400 caractères ne concerne que les légendes de posts photo.
+    const count = p.type==="post"
+      ? `<span class="cc ${bad?'bad':''}">${bl} car.</span><span>·</span><span>${bad?'hors 150-400':'ok'}</span>`
+      : `<span class="cc" style="color:${ty.color}">${ty.label}</span><span>·</span><span>${s.date||"non planifié"}${s.heure?" · "+s.heure:""}</span>`;
     const div=document.createElement("div"); div.className="card";
     setH(div, thumb + `<div class="cbody">
       <div class="angle">${esc(p.angle)}</div>
-      <div class="meta"><span class="cc ${bad?'bad':''}">${bl} car.</span><span>·</span><span>${bad?'hors 150-400':'ok'}</span></div>
+      <div class="meta">${count}</div>
       ${warn}
       <div class="cap">${esc(p.cap)}</div>
       <div class="row">
@@ -353,14 +535,14 @@ function setDate(id,v){ state[id].date=v; if(v && state[id].status==='apublier')
 function setHeure(id,v){ state[id].heure=v; save(); if(view==='cal')renderCal(); }
 
 function openModal(id){
-  const p=POSTS.find(x=>x.id===id), s=st(p), stt=STATUS[s.status], bl=bodyLen(p.cap);
+  const p=POSTS.find(x=>x.id===id), s=st(p), stt=STATUS[s.status], ty=TYPES[p.type], bl=bodyLen(p.cap);
   const mImg=document.getElementById("mImg");
   mImg.style.cssText = p.img?bg(p):"background:#e9eff7";
   setH(mImg, p.img?"":"<div style='display:flex;height:100%;align-items:center;justify-content:center;color:#9aa2b1'>"+(p.phLabel||"Photo à lier")+"</div>");
-  document.getElementById("mAngle").textContent = "#"+p.num+" · "+p.angle;
-  setH(document.getElementById("mMeta"), `<span class="pill" style="position:static;background:${stt.color}">${stt.label}</span> <span>${s.date||"non planifié"}${s.heure?" · "+s.heure:""}</span>`);
+  document.getElementById("mAngle").textContent = ty.icon+" "+ty.label+" #"+p.num+" · "+p.angle;
+  setH(document.getElementById("mMeta"), `<span class="pill" style="position:static;background:${ty.color}">${ty.short}</span> <span class="pill" style="position:static;background:${stt.color}">${stt.label}</span> <span>${s.date||"non planifié"}${s.heure?" · "+s.heure:""}</span>`);
   document.getElementById("mCap").textContent = p.cap;
-  setH(document.getElementById("mCC"), `<b class="${bl<150||bl>400?'cc bad':'cc'}">${bl} car.</b> hors signature`);
+  setH(document.getElementById("mCC"), p.type==="post" ? `<b class="${bl<150||bl>400?'cc bad':'cc'}">${bl} car.</b> hors signature` : "");
   document.getElementById("mCopy").onclick=()=>copy(p.cap);
   document.getElementById("ov").classList.add("on");
 }
@@ -372,8 +554,13 @@ const DOW=["Lun","Mar","Mer","Jeu","Ven","Sam","Dim"];
 function moveMonth(d){ cur.setMonth(cur.getMonth()+d); renderCal(); }
 function iso(y,m,d){ return `${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`; }
 function chip(p,tray){
+  const ty=TYPES[p.type];
   const im = p.img?`<img src="${p.img}">`:`<span class="ph2"></span>`;
-  return `<div class="${tray?'tchip':'ev'}" draggable="true" data-id="${p.id}">${im}<span>#${p.num}${!tray && st(p).heure?" · "+st(p).heure:""}</span>${tray?'':`<span class="x" onclick="event.stopPropagation();unschedule('${p.id}')">✕</span>`}</div>`;
+  // La mention de format est portée par une pastille couleur + l'icône, pour identifier
+  // le contenu d'un coup d'œil dans la grille du mois.
+  const tag = `<span class="fmt" style="background:${ty.color}">${ty.icon} ${ty.short}</span>`;
+  const meta = tray ? "" : (st(p).heure?" · "+st(p).heure:"");
+  return `<div class="${tray?'tchip':'ev'}" draggable="true" data-id="${p.id}" title="${esc(ty.label+" #"+p.num+" — "+p.angle)}">${im}<span class="evtxt">${tag}<span>#${p.num}${meta}</span></span>${tray?'':`<span class="x" onclick="event.stopPropagation();unschedule('${p.id}')">✕</span>`}</div>`;
 }
 function renderTray(){
   const t=document.getElementById("tray");
@@ -424,9 +611,10 @@ function setView(v){
   document.getElementById("cal").classList.toggle("hidden",v!=="cal");
   document.getElementById("vBoard").classList.toggle("on",v==="board");
   document.getElementById("vCal").classList.toggle("on",v==="cal");
-  if(v==="cal")renderCal(); else renderBoard();
+  if(v==="cal"){ renderCal(); renderStats(); } else renderBoard();
 }
-renderBoard();
+// #cal dans l'URL ouvre directement la vue calendrier (lien partageable).
+setView(location.hash === "#cal" ? "cal" : "board");
 </script>
 </body>
 </html>
