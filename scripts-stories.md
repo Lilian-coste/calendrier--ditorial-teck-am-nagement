@@ -10,7 +10,8 @@ Aucune story le **mardi** (post photo) ni le **vendredi** (reel). Le **14 juille
 ## 🎯 Les règles d'écriture
 
 1. **Le titre évoque un moment ou une idée, jamais un produit** (référence : Porsche, « SKI DAYS THAT START WITH A SMILE »).
-2. **Le titre est TOUJOURS EN MAJUSCULES**, en Helvetica Neue Light (bâton, plein uniforme). **Le texte sous le titre reste en écriture normale** (première lettre en majuscule, le reste en minuscules). C'est ce contraste que Lilian a validé.
+2. **Typo Teck, validée par le client :** titre en **Helvetica Neue Light**, **TOUT EN MAJUSCULES**, interlettrage ouvert. Sous-titre et texte en **Helvetica Neue Regular**, en **écriture normale**. Jamais de serif, jamais de sous-titre en capitales. Règle complète (elle vaut pour tous les visuels Teck, site et publicités compris) : [brand-voice.md](../../briefs/brand-voice.md).
+3. **Si on met un point, on revient à la ligne.** Une nouvelle phrase ne se colle jamais à la fin de la précédente sur la même ligne.
 3. Sous le titre, **une info courte et vraiment utile** à quelqu'un qui a un projet. C'est ce qui a fait marcher les stories de Teck.
 4. **Aucun CTA, aucun hashtag.** La story installe la marque.
 5. On peut **surligner en bleu Teck** les mots qui portent le message (ex. « AUCUN ENTRETIEN »).
@@ -54,7 +55,8 @@ Des voilages de lin ou de coton, noués aux poteaux. On les déplie quand le sol
 > Format inspiré de Cauchi Design, passé à la charte Teck (bleu, aucun doré). **Ne jamais y ajouter un équipement que Teck ne propose pas.**
 
 ## S3 — LE DÉTAIL QU'ON NE VOIT QU'AU SOLEIL
-La finition de nos structures est un sable texturé. Au soleil, de fines paillettes d'aluminium l'illuminent et lui donnent toute sa profondeur.
+La finition de nos structures est un sable texturé.
+Au soleil, de fines paillettes d'aluminium l'illuminent et lui donnent toute sa profondeur.
 
 ## S-14JUIL — BON 14 JUILLET
 Belle fête à toutes et à tous… Avec les chaleurs record de cet été, n'oubliez pas de vous mettre à l'ombre !
