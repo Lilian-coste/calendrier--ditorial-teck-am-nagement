@@ -17,8 +17,7 @@
 > Les numéros #4 et #5 ont été abandonnés (d'où les trous). Les prochains reels « réponse à une question » sont en attente de la liste de questions prospects (déjà validées : luminosité → #7, entretien → #3).
 
 > ⚠️ **Vérifs de sourcing avant tournage**
-> - **#2 (atelier) :** confirmer avec le client que Teck **façonne réellement le bois** (mesure, découpe, ajustage) avant la pose. Sinon adapter le wording. Bonne nouvelle : les Stories de chantier confirment la matière (« le bois passe entre nos mains », « au millimètre près »).
-> - **#2 :** ne pas montrer de plan « huilage » dans le montage atelier, ça brouillerait le message « sans l'huiler » de #3.
+> - **#2 :** ✅ **Rien à valider.** Le process 3D est déjà sourcé (post validé du 01/06/2026) et les rendus appartiennent à Teck. Seule chose à récupérer : les **rendus 3D d'un projet dont on a aussi les photos finales**, pour le match cut.
 > - **#3 :** ✅ **VALIDÉ (Lilian, 12/07/2026).** Le **claim d'exclusivité** (« une solution qui nous est propre, que personne d'autre ne détient dans le sud de la France ») est confirmé. On le garde tel quel, protégé par « à notre connaissance ».
 > - **#3 et #6 :** le chiffre **« jusqu'à 13° de moins qu'au soleil »** vient du **test réalisé par Teck**. La **vidéo du test doit être montrée** (cf. note de montage du #3). Ne jamais citer le chiffre sans cette preuve à l'écran.
 > - **#3 :** la promesse **« nous vous répondrons dans la journée »** est un engagement opérationnel : s'assurer que Franck peut le tenir, sinon la retirer.
