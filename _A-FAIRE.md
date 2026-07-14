@@ -12,7 +12,11 @@ Le bois est **l'élément phare** de Teck. Dès qu'on en parle, il faut **faire 
 ## 🔴 Lilian → Franck
 
 - [x] ~~Le process atelier~~ — sans objet, le reel « bois » est abandonné et remplacé par le reel 3D.
-- [ ] **Récupérer les rendus 3D** d'un projet dont on a aussi les photos finales (pour le match cut du reel #2, vendredi 14 août).
+- [ ] **Reel #2 (vendredi 14 août) — vidéo motion design.** À réunir :
+  - les **rendus 3D** d'un projet dont on a **aussi les photos finales** (pour la comparaison haut / bas du dernier plan, au même cadrage) ;
+  - une **capture vidéo de l'écran** pendant qu'on fait varier la lumière et les angles sur le rendu ;
+  - un **rendu 3D qui tourne sur lui-même** (plan 2).
+  - Fond motion design : blanc à points gris clair (façon Canva / Miro), **cercle au centre** qui garde ce fond, **couleur unie tout autour** pour centrer l'œil. Détail dans [scripts-reels.md](scripts-reels.md).
 - [ ] **« Nous vous répondrons dans la journée »** (reel #3, carte de fin) : est-ce que Franck peut **tenir cet engagement** ? Si non, on retire la phrase. Reel programmé le **vendredi 24 juillet**.
 - [ ] **La vidéo du test -13°** : récupérer le rush pour pouvoir l'incruster en bulle dans le reel #3. **Le chiffre ne doit jamais être cité sans la preuve à l'écran.**
 

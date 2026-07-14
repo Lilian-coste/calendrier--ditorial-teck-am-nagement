@@ -62,20 +62,32 @@
 **Répond à la peur n°1 de l'avatar :** « Et si je regrettais ? Comment être sûr que le résultat me plaira ? »
 **Angle :** on ne vend pas la 3D comme un outil, on vend la **tranquillité** qu'elle apporte. Le prospect valide chaque détail **avant** qu'on construise.
 **Pourquoi ce sujet :** l'angle a déjà été validé par Lilian sur un post (« la question est géniale, la légende est géniale »). Les rendus 3D appartiennent à Teck, donc **aucun problème de droits**. Et c'est un savoir-faire que peu d'artisans montrent : c'est premium par nature.
-**Rushs :** captures d'écran / exports des rendus 3D d'un projet réel, plusieurs points de vue, plusieurs heures de la journée. Puis les **photos du projet une fois réalisé**, pour le match cut final.
+**Format :** ⭐ **vidéo motion design**, pas un montage de rushs. C'est ce qui donne le niveau haut de gamme recherché.
+**Rushs à fournir :** les **rendus 3D** d'un projet réel (plusieurs angles, plusieurs heures de la journée), une **capture d'écran vidéo de l'ordinateur** pendant qu'on fait varier la lumière et les angles, et les **photos du projet une fois réalisé**.
 **Musique :** posée, élégante, montée progressive jusqu'au reveal.
+
+### 🎨 Direction artistique — le fond motion design
+
+**Le fond, valable sur tous les plans de motion design (1, 4 et 5).**
+
+- Un **fond blanc rempli de petits points gris clair**, comme dans un document Canva ou dans Miro.
+- Comme la vidéo est **verticale**, on crée **un cercle au centre** qui garde ce fond blanc à points. **Tout autour**, on met un **fond de couleur unie**.
+- Le but : **l'œil se centre immédiatement sur le cercle**, et c'est là, à l'intérieur, **qu'apparaissent tous les mots**.
+- **Couleur du pourtour :** bleu Teck `#0653A8` ou navy `#0A1F44`. **Jamais de jaune ni de doré** (charte Teck).
+
+### Découpage plan par plan
 
 | Temps | Image | Texte à l'écran / Voix off |
 |-------|-------|-----------------------------|
-| 0-3 s | Un rendu 3D de pergola, qui tourne lentement | **Texte :** « Et si vous pouviez visiter votre future pergola avant même qu'elle existe ? » |
-| 3-10 s | Plusieurs rendus du même projet, sous différents angles | **VO :** « Avant de poser la moindre pièce, nous dessinons votre pergola en 3D. » |
-| 10-18 s | Le même rendu, la lumière qui passe du matin au soir | **VO :** « Nous jouons même sur la lumière, du soleil du matin à la douceur de la fin d'après-midi. Vous voyez comment votre extérieur vivra, heure après heure. » |
-| 18-28 s | Un détail qu'on modifie à l'écran (avant / après) | **VO :** « Et tant que le rendu ne vous correspond pas parfaitement, nous l'ajustons. Autant de fois qu'il le faut. » |
-| 28-36 s | **Match cut :** le rendu 3D se fond dans la **photo du projet réalisé** | **Texte :** « Vous validez chaque détail avant que nous commencions à construire. » |
-| 36-45 s | Plan large de la réalisation finie, vie de famille dessous | **VO :** « Et en vrai, c'est encore plus beau qu'en 3D. » |
-| CTA | Carton Teck | **Texte :** « Envoyez-nous un DM ou cliquez sur le lien en bio. Nous vous répondrons dans la journée. » |
+| **1 — 0-4 s** | **Motion design.** Fond blanc à points + cercle central, la phrase s'écrit **dans le cercle**. | **Texte animé :** « Et si vous pouviez visiter votre future pergola avant même qu'elle existe ? » |
+| **2 — 4-11 s** | **Une vraie pergola en 3D apparaît à l'écran et tourne sur elle-même**, au moment exact où la voix dit « votre pergola en 3D ». | **VO :** « Avant de poser la moindre pièce, nous dessinons votre pergola en 3D. » |
+| **3 — 11-20 s** | **Une vraie vidéo de l'écran de l'ordinateur** : on montre les **jeux de lumière** pour que les gens voient la différence, et les **différents angles**. | **VO :** « Nous jouons même sur la lumière, du soleil du matin à la douceur de la fin d'après-midi. Vous voyez comment votre extérieur vivra, heure après heure et sous différents angles. » |
+| **4 — 20-27 s** | **Retour sur le même fond que le plan 1** (cercle + points). La phrase s'écrit en motion design. | **Texte animé + VO :** « Et tant que le rendu ne vous correspond pas parfaitement, nous l'ajustons. Autant de fois qu'il le faut. » |
+| **5 — 27-33 s** | **Idem plan 4**, même fond, même traitement motion design. | **Texte animé + VO :** « Vous validez chaque détail avant que nous commencions à construire. » |
+| **6 — 33-42 s** | **Comparaison en écran partagé** : **en haut le visuel 3D**, **en bas le rendu en vrai**. Même cadrage sur les deux. | **VO :** « Et en vrai, c'est encore plus beau qu'en 3D. » |
+| **CTA** | Carton Teck | **Texte :** « Envoyez-nous un DM ou cliquez sur le lien en bio. Nous vous répondrons dans la journée. » |
 
-> **Note de montage.** Tout le reel tient sur **le match cut final** : le rendu 3D qui devient la vraie photo, exactement au même cadrage. Il faut donc choisir **un projet dont on a à la fois les rendus 3D et les photos finales**, et exporter le rendu depuis le même point de vue que la photo. C'est ce plan qui fait la preuve.
+> **Note de montage — le plan qui porte tout le reel.** C'est le **plan 6**, la comparaison haut / bas. Le visuel 3D en haut et la photo réelle en bas doivent être **exactement au même cadrage** : c'est ce qui fait la preuve. Il faut donc choisir **un projet dont on a à la fois les rendus 3D et les photos finales**, et exporter le rendu depuis le point de vue de la photo.
 
 **Légende du reel :**
 > Et si vous pouviez visiter votre future pergola avant même qu'elle existe ?
