@@ -5,7 +5,7 @@
 ## 🔴 Lilian → Franck (bloque 2 reels)
 
 - [ ] **Le process atelier** (reel #2 « Le geste ») : est-ce que les équipes **mesurent, découpent et ajustent réellement le bois** avant la pose ? Sans confirmation, le reel ne peut pas être tourné. Programmé le **vendredi 14 août**, donc il reste du temps.
-- [ ] **« Nous vous répondrons dans l'heure »** (reel #3, carte de fin) : est-ce que Franck peut **tenir cet engagement** ? Si non, on retire la phrase. Reel programmé le **vendredi 24 juillet**.
+- [ ] **« Nous vous répondrons dans la journée »** (reel #3, carte de fin) : est-ce que Franck peut **tenir cet engagement** ? Si non, on retire la phrase. Reel programmé le **vendredi 24 juillet**.
 - [ ] **La vidéo du test -13°** : récupérer le rush pour pouvoir l'incruster en bulle dans le reel #3. **Le chiffre ne doit jamais être cité sans la preuve à l'écran.**
 
 ✅ **Le claim d'exclusivité est validé** (« une solution qui nous est propre, que personne d'autre ne détient dans le sud de la France »). Plus rien à demander là-dessus.

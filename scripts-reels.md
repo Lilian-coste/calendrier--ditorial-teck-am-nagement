@@ -21,7 +21,7 @@
 > - **#2 :** ne pas montrer de plan « huilage » dans le montage atelier, ça brouillerait le message « sans l'huiler » de #3.
 > - **#3 :** ✅ **VALIDÉ (Lilian, 12/07/2026).** Le **claim d'exclusivité** (« une solution qui nous est propre, que personne d'autre ne détient dans le sud de la France ») est confirmé. On le garde tel quel, protégé par « à notre connaissance ».
 > - **#3 et #6 :** le chiffre **« jusqu'à 13° de moins qu'au soleil »** vient du **test réalisé par Teck**. La **vidéo du test doit être montrée** (cf. note de montage du #3). Ne jamais citer le chiffre sans cette preuve à l'écran.
-> - **#3 :** la promesse **« nous vous répondrons dans l'heure »** est un engagement opérationnel : s'assurer que Franck peut le tenir, sinon la retirer.
+> - **#3 :** la promesse **« nous vous répondrons dans la journée »** est un engagement opérationnel : s'assurer que Franck peut le tenir, sinon la retirer.
 > - **#7 :** ✅ **RÉSOLU.** La phrase « la luminosité reste inchangée » est désormais **sourcée par un vrai avis client Google** : **Mathieu (5★, 21/12/2025)** — *« La luminosité reste la même à l'intérieur de la maison tout en protégeant ma terrasse du soleil. »* → **incruster cette citation à l'écran** sur le plan 17-28 s, c'est la meilleure preuve possible. Bonus : **Mike BLAY (5★, 03/05/2026)** avait exactement cette objection — *« Nous avions une interrogation sur l'ombrage effectif d'une structure ajourée : l'ombre est efficace et la lumière tamisée très agréable sous la pergola. »*
 
 ---
@@ -95,7 +95,7 @@
 | 24-34 s | La pergola fondue dans son décor, la famille qui profite, détendue | **VO :** « Grâce à cette solution, vous profitez d'une pergola qui se fond dans le décor, par ses couleurs naturelles et le charme du bois, sans jamais avoir à l'entretenir. » |
 | 34-45 s | **🎬 INCRUSTATION : la vidéo du test de température dans une bulle** | **Texte :** « Jusqu'à -13° à l'ombre » · **VO :** « Mais surtout, qui crée un espace à l'ombre où il fait jusqu'à 13° de moins qu'au soleil. Comme nous le prouve le test que nous avons fait. » |
 | CTA | Logo Teck | **Texte :** « Un DM, ou le lien en bio. » · **VO :** « Si vous avez un projet de pergola et que vous souhaitez être au frais l'été, envoyez-nous un DM sur Instagram ou cliquez sur le lien de notre biographie pour nous faire votre demande. » |
-| Fin | Carton final | **Texte :** « Nous vous répondrons dans l'heure. » |
+| Fin | Carton final | **Texte :** « Nous vous répondrons dans la journée. » |
 
 > 🎬 **NOTE DE MONTAGE IMPORTANTE (plan 34-45 s)** : incruster **dans une bulle** la **vidéo qui montre la preuve du test** de température, **avec un sous-titre**, pour bien montrer que c'est une **vraie vidéo** (et pas une affirmation en l'air).
 
@@ -106,7 +106,7 @@
 >
 > Et surtout, une ombre où il fait jusqu'à 13° de moins qu'au soleil. Notre test le prouve.
 >
-> Un projet pour cet été ? Un DM ou le lien en bio, réponse dans l'heure.
+> Un projet pour cet été ? Un DM ou le lien en bio, réponse dans la journée.
 >
 > Teck Aménagement... Une nouvelle gamme de pergolas pour sublimer votre extérieur 🖊️
 >
@@ -117,7 +117,7 @@
 > - « C'est vrai pour beaucoup de bois » = constat général sur les essences, jamais un dénigrement d'un concurrent. ✅
 > - ⚠️ **Claim d'exclusivité** (« une solution qui nous est propre, que personne d'autre ne détient dans le sud de la France ») : protégé par « à notre connaissance », mais **à faire valider par Franck**.
 > - ⚠️ **« Jusqu'à 13° de moins qu'au soleil »** : chiffre issu du **test Teck**. Ne jamais le citer sans montrer la vidéo du test à l'écran.
-> - ⚠️ **« Réponse dans l'heure »** : engagement opérationnel, à confirmer que Franck peut le tenir.
+> - ⚠️ **« Réponse dans la journée »** : engagement opérationnel, à confirmer que Franck peut le tenir.
 > - L'argument **« primaire anti-corrosion type marine »** (verbatim Franck, vidéo 2) reste en réserve pour le futur reel « Est-ce que ça rouille ? ».
 
 ---
