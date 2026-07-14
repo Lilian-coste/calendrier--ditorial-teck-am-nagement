@@ -2,9 +2,17 @@
 
 > Mis à jour le **12/07/2026**. Ce fichier existe pour qu'aucun point ne se perde entre deux conversations. Coche au fur et à mesure.
 
-## 🔴 Lilian → Franck (bloque 2 reels)
+## 🎬 Le projet « court-métrage bois » (décidé le 14/07/2026)
 
-- [ ] **Le process atelier** (reel #2 « Le geste ») : est-ce que les équipes **mesurent, découpent et ajustent réellement le bois** avant la pose ? Sans confirmation, le reel ne peut pas être tourné. Programmé le **vendredi 14 août**, donc il reste du temps.
+Le bois est **l'élément phare** de Teck. Dès qu'on en parle, il faut **faire rêver**. Un reel court et simple donne un effet bas de gamme : c'est ce qui a fait abandonner le reel #2 « Le geste ».
+
+- [ ] **Produire un mini-film / court-métrage autour du bois**, très esthétique et élégant. Format et durée à cadrer, mais l'exigence est claire : lumière, matière, rythme, son. C'est un projet à part entière, pas un reel.
+- ⛔ **Règle qui en découle :** tant que ce film n'existe pas, **on ne produit aucun contenu « bois » au rabais**. Le bois ne se traite pas dans un format court bâclé.
+
+## 🔴 Lilian → Franck
+
+- [x] ~~Le process atelier~~ — sans objet, le reel « bois » est abandonné et remplacé par le reel 3D.
+- [ ] **Récupérer les rendus 3D** d'un projet dont on a aussi les photos finales (pour le match cut du reel #2, vendredi 14 août).
 - [ ] **« Nous vous répondrons dans la journée »** (reel #3, carte de fin) : est-ce que Franck peut **tenir cet engagement** ? Si non, on retire la phrase. Reel programmé le **vendredi 24 juillet**.
 - [ ] **La vidéo du test -13°** : récupérer le rush pour pouvoir l'incruster en bulle dans le reel #3. **Le chiffre ne doit jamais être cité sans la preuve à l'écran.**
 

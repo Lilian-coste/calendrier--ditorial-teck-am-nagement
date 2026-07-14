@@ -56,7 +56,7 @@ Aucun format ne tombe le même jour qu'un autre, pour ne pas se cannibaliser.
 | ven. 24 juil. · 19h | **#3 — Le bois et l'entretien** (+ preuve -13°) | ✅ Prêt à tourner |
 | ven. 31 juil. · 19h | **#7 — La luminosité** (+ citation de Mathieu) | ✅ Prêt à tourner |
 | ven. 7 août · 19h | **#6 — Les 4 détails d'un projet réussi** | ✅ Prêt à tourner |
-| ven. 14 août · 19h | **#2 — Le geste (atelier)** | ⏳ En dernier : laisse le temps de valider le process avec Franck |
+| ven. 14 août · 19h | **#2 — Visitez votre pergola avant qu'elle existe** (3D) | ✅ Prêt à monter · remplace le reel « bois », abandonné |
 
 > Scripts complets : [scripts-reels.md](scripts-reels.md) · PDF client : [pdf/](pdf/)
 

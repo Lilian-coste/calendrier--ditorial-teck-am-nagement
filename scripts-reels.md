@@ -9,7 +9,7 @@
 | # | Titre | Répond à la question | Statut |
 |---|-------|----------------------|--------|
 | 1 | La vidéo du thermomètre | « Ça change vraiment quelque chose contre la chaleur ? » | ✅ Déjà tournée (pas de script) |
-| 2 | Le geste (atelier) | « Comment est fabriquée ma pergola ? C'est vraiment du sur-mesure ? » | ⏳ En attente validation client |
+| 2 | Visitez votre pergola avant qu'elle existe (3D) | « Et si je regrettais ? Comment être sûr du résultat ? » | ✅ Prêt |
 | 3 | Le bois dehors, ça s'entretient tout le temps ? | « Le bois en extérieur, c'est de l'entretien à vie ? » | ✅ Prêt |
 | 6 | N'installez pas de pergola avant d'avoir entendu ça | « Comment réussir mon projet de pergola ? » | ✅ Prêt |
 | 7 | Une pergola, ça va assombrir ma maison ? | « Vais-je perdre en lumière, surtout l'hiver ? » | ✅ Prêt |
@@ -47,35 +47,49 @@
 
 ---
 
-## Reel #2 — « Le geste » (atelier) 🛠️ Autorité · 30-45 s · ⏳ EN ATTENTE VALIDATION CLIENT
+## Reel #2 — « Le geste » (atelier) · ❌ ABANDONNÉ (Lilian, 14/07/2026)
 
-**Répond à :** « Comment est fabriquée ma pergola ? Est-ce vraiment du sur-mesure ? »
-**Angle :** le travail qu'on ne voit pas. **Inspiration :** trend reels artisan/ASMR (le plus fort en crédibilité).
-**Rushs :** atelier (bois brut, mesure, découpe, ajustage, assemblage, **sons réels**), puis reveal de la pergola posée chez le client.
-**Musique :** discrète OU aucune, on laisse les **sons ASMR** de l'atelier porter.
+**Pourquoi on l'abandonne.** Le script tenait la route sur le fond, mais dans sa réalisation il faisait **trop simple, donc bas de gamme**. Or le bois est **l'élément phare** de Teck : dès qu'on en parle, il faut **faire rêver**. Un reel court, montré en plans d'atelier enchaînés, ne peut pas porter ça.
 
-| Temps | Image | Texte à l'écran / Son |
-|-------|-------|------------------------|
-| 0-3 s | Gros plan : une main pose une planche de bois exotique brut sur l'établi | **Texte :** « Voilà ce qui se passe avant que votre pergola arrive chez vous. » |
-| 3-8 s | Mesure au crayon, mètre sur le bois | **Texte :** « On choisit le bois. » · son réel |
-| 8-14 s | Découpe, copeaux qui volent | **Texte :** « On le façonne. » · son réel |
-| 14-20 s | Ajustage, assemblage de deux pièces qui s'emboîtent | **Texte :** « On l'ajuste au millimètre. » · son réel |
-| 20-27 s | Transition (match cut) vers la pergola **posée** chez le client | **Texte :** « Après, c'est chez vous. » |
-| 27-38 s | Plan large de la réalisation finie | **VO :** « Rien n'est standard. Chaque pergola est pensée pour votre maison avant d'être montée chez vous. » |
-| CTA | Logo Teck | **Texte :** « Découvrez nos réalisations. Lien en bio. » |
+> 🎬 **Décision : le bois mérite un court-métrage, pas un reel.**
+> On ne traite plus le bois dans un format reel classique. Lilian veut produire un **mini-film / court-métrage très esthétique et élégant** autour du bois. C'est un projet à part, avec son propre niveau d'exigence (lumière, matière, rythme, son). Tant qu'il n'est pas fait, **on ne fait aucun contenu « bois » au rabais**.
+>
+> Conséquence : le créneau du **vendredi 14 août** est repris par le reel ci-dessous.
+
+---
+
+## Reel #2 (nouveau) — « Visitez votre pergola avant qu'elle existe » 💡 Objection · 40-50 s · ✅ PRÊT
+
+**Répond à la peur n°1 de l'avatar :** « Et si je regrettais ? Comment être sûr que le résultat me plaira ? »
+**Angle :** on ne vend pas la 3D comme un outil, on vend la **tranquillité** qu'elle apporte. Le prospect valide chaque détail **avant** qu'on construise.
+**Pourquoi ce sujet :** l'angle a déjà été validé par Lilian sur un post (« la question est géniale, la légende est géniale »). Les rendus 3D appartiennent à Teck, donc **aucun problème de droits**. Et c'est un savoir-faire que peu d'artisans montrent : c'est premium par nature.
+**Rushs :** captures d'écran / exports des rendus 3D d'un projet réel, plusieurs points de vue, plusieurs heures de la journée. Puis les **photos du projet une fois réalisé**, pour le match cut final.
+**Musique :** posée, élégante, montée progressive jusqu'au reveal.
+
+| Temps | Image | Texte à l'écran / Voix off |
+|-------|-------|-----------------------------|
+| 0-3 s | Un rendu 3D de pergola, qui tourne lentement | **Texte :** « Et si vous pouviez visiter votre future pergola avant même qu'elle existe ? » |
+| 3-10 s | Plusieurs rendus du même projet, sous différents angles | **VO :** « Avant de poser la moindre pièce, nous dessinons votre pergola en 3D. » |
+| 10-18 s | Le même rendu, la lumière qui passe du matin au soir | **VO :** « Nous jouons même sur la lumière, du soleil du matin à la douceur de la fin d'après-midi. Vous voyez comment votre extérieur vivra, heure après heure. » |
+| 18-28 s | Un détail qu'on modifie à l'écran (avant / après) | **VO :** « Et tant que le rendu ne vous correspond pas parfaitement, nous l'ajustons. Autant de fois qu'il le faut. » |
+| 28-36 s | **Match cut :** le rendu 3D se fond dans la **photo du projet réalisé** | **Texte :** « Vous validez chaque détail avant que nous commencions à construire. » |
+| 36-45 s | Plan large de la réalisation finie, vie de famille dessous | **VO :** « Et en vrai, c'est encore plus beau qu'en 3D. » |
+| CTA | Carton Teck | **Texte :** « Envoyez-nous un DM ou cliquez sur le lien en bio. Nous vous répondrons dans la journée. » |
+
+> **Note de montage.** Tout le reel tient sur **le match cut final** : le rendu 3D qui devient la vraie photo, exactement au même cadrage. Il faut donc choisir **un projet dont on a à la fois les rendus 3D et les photos finales**, et exporter le rendu depuis le même point de vue que la photo. C'est ce plan qui fait la preuve.
 
 **Légende du reel :**
-> Avant d'arriver chez vous, votre pergola passe par nos mains.
+> Et si vous pouviez visiter votre future pergola avant même qu'elle existe ?
 >
-> On choisit le bois, on le façonne et on l'ajuste au millimètre pour votre maison. Rien n'est standard, tout est pensé pour durer et pour vous ressembler.
+> Avant de poser la moindre pièce de bois, nous la créons en 3D. Vous la voyez sous tous les angles et à toutes les heures du jour, et nous l'ajustons autant de fois qu'il le faut.
 >
-> C'est ce travail que vous ne voyez pas qui fait toute la différence une fois la pergola posée.
+> Vous validez chaque détail avant que nous commencions à construire.
 >
 > Teck Aménagement... Une nouvelle gamme de pergolas pour sublimer votre extérieur 🖊️
 >
-> #TeckAménagement #SavoirFaire #PergolaBois #SurMesure #Provence
+> #TeckAménagement #PergolaSurMesure #Visuel3D #AménagementExtérieur #Provence
 
-> ⚠️ Adapter « passe par nos mains / on le façonne » au niveau réel d'atelier Teck (à valider avec le client).
+> ✅ **Rien à valider avec Franck.** Le process 3D est déjà sourcé et décrit dans le post validé du 01/06/2026. La seule chose à récupérer : les **rendus 3D d'un projet dont on a aussi les photos finales**.
 
 ---
 
