@@ -72,6 +72,7 @@
   .btn.p{background:var(--blue);color:#fff}
   .btn.g{background:var(--fog);color:var(--ink)}
   .btn:active{transform:translateY(1px)}
+  .nocap{background:#eef4fc;border:1px solid #cfe0f5;border-left:4px solid var(--blue);color:#2c4f7c;border-radius:10px;padding:8px 10px;font-size:12px}
   .warn{background:#fff6e9;border:1px solid #f3dcb0;border-left:4px solid var(--amber);color:#a9701f;border-radius:10px;padding:8px 10px;font-size:12px}
 
   /* CALENDAR */
@@ -522,6 +523,10 @@ function renderBoard(){
       ? `<div class="thumb" onclick="openModal('${p.id}')"><img src="${p.img}" alt="">${tag}<span class="pill" style="background:${stt.color}">${stt.label}</span></div>`
       : `<div class="thumb ph" onclick="openModal('${p.id}')">${tag}<span class="pill" style="background:${stt.color}">${stt.label}</span><span>${p.phLabel||'🖼️ Photo à lier'}</span></div>`;
     const warn = p.warn?`<div class="warn">⚠️ ${esc(p.warn)}</div>`:"";
+    // Une story se publie SANS description : le texte ci-dessous est ce qui est
+    // incrusté dans le visuel, jamais une légende à coller dans Instagram.
+    const noCap = p.type==="story"
+      ? `<div class="nocap">⛔ Aucune description à publier. Le texte est <b>dans le visuel</b>.</div>` : "";
     // Le calibrage 150-400 caractères ne concerne que les légendes de posts photo.
     const count = p.type==="post"
       ? `<span class="cc ${bad?'bad':''}">${bl} car.</span><span>·</span><span>${bad?'hors 150-400':'ok'}</span>`
@@ -530,7 +535,7 @@ function renderBoard(){
     setH(div, thumb + `<div class="cbody">
       <div class="angle">${esc(p.angle)}</div>
       <div class="meta">${count}</div>
-      ${warn}
+      ${warn}${noCap}
       <div class="cap">${esc(p.cap)}</div>
       <div class="row">
         <select onchange="setStatus('${p.id}',this.value)">
@@ -538,7 +543,7 @@ function renderBoard(){
         </select>
         <input type="date" value="${s.date}" onchange="setDate('${p.id}',this.value)">
         <input type="text" value="${s.heure||''}" placeholder="heure" style="width:60px;text-align:center" onchange="setHeure('${p.id}',this.value)">
-        <button class="btn g" onclick="copy(POSTS.find(x=>x.id==='${p.id}').cap)">Copier</button>
+        <button class="btn g" onclick="copy(POSTS.find(x=>x.id==='${p.id}').cap)">${p.type==="story"?"Copier le texte du visuel":"Copier la légende"}</button>
       </div>
     </div>`);
     g.appendChild(div);
@@ -561,6 +566,7 @@ function openModal(id){
   setH(document.getElementById("mMeta"), `<span class="pill" style="position:static;background:${ty.color}">${ty.short}</span> <span class="pill" style="position:static;background:${stt.color}">${stt.label}</span> <span>${s.date||"non planifié"}${s.heure?" · "+s.heure:""}</span>`);
   document.getElementById("mCap").textContent = p.cap;
   setH(document.getElementById("mCC"), p.type==="post" ? `<b class="${bl<150||bl>400?'cc bad':'cc'}">${bl} car.</b> hors signature` : "");
+  document.getElementById("mCopy").textContent = p.type==="story" ? "Copier le texte du visuel" : "Copier la légende";
   document.getElementById("mCopy").onclick=()=>copy(p.cap);
   document.getElementById("ov").classList.add("on");
 }

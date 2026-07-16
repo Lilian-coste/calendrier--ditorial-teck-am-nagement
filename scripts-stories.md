@@ -13,7 +13,7 @@ Aucune story le **mardi** (post photo) ni le **vendredi** (reel). Le **14 juille
 2. **Typo Teck, validée par le client :** titre en **Helvetica Neue Light**, **TOUT EN MAJUSCULES**, interlettrage ouvert. Sous-titre et texte en **Helvetica Neue Regular**, en **écriture normale**. Jamais de serif, jamais de sous-titre en capitales. Règle complète (elle vaut pour tous les visuels Teck, site et publicités compris) : [brand-voice.md](../../briefs/brand-voice.md).
 3. **Si on met un point, on revient à la ligne.** Une nouvelle phrase ne se colle jamais à la fin de la précédente sur la même ligne.
 3. Sous le titre, **une info courte et vraiment utile** à quelqu'un qui a un projet. C'est ce qui a fait marcher les stories de Teck.
-4. **Aucun CTA, aucun hashtag.** La story installe la marque.
+4. ⛔ **AUCUNE DESCRIPTION, aucun CTA, aucun hashtag.** On publie **l'image seule** (+ le sticker musique), rien d'autre. Tout le texte vit **dans le visuel**. Ce qui est écrit sous chaque story dans ce fichier, c'est le **texte à incruster sur l'image**, jamais une légende à publier. La story installe la marque.
 5. On peut **surligner en bleu Teck** les mots qui portent le message (ex. « AUCUN ENTRETIEN »).
 
 **Forme :** photo pleine largeur · titre serif blanc en haut · info dessous · sticker musique.
