@@ -97,6 +97,7 @@ Lilian refait les cartes ailleurs pour un rendu plus soigné. Les fonds sont bon
 > *« Une vraie plus value pour la maison. Une entreprise sérieuse et réactive qui a respecté tous ses engagements. »*
 > Photo : `unnamed_003_6pcK.jpg` (photo jointe à son avis Google). Aucune ville affichée : elle n'est pas dans l'avis, on ne l'invente pas.
 > **Design :** carte bento façon Apple (fond #F5F5F7, carte blanche arrondie, 5 étoiles bleues, avatar à initiales), sur le modèle fourni par Lilian le 16/07.
+> **Bordure bleue Teck + ombre portée :** c'est l'état `:hover` du design de référence. Une image fixe n'ayant pas de survol, on le **fige en permanence**. À reprendre sur toutes les futures cartes témoignage. Source du visuel : [_source-S2-avis-muriel.py](stories-maquettes/_source-S2-avis-muriel.py).
 
 > **Remplace Jean-Luc Vinet**, qui reste disponible pour un autre jeudi : *« Nous en avions rêvé, Teck Aménagement l'a fait ! »* — ⚠️ la coupe […] y est **obligatoire**, l'original contient une pique contre les concurrents.
 
