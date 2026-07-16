@@ -30,7 +30,7 @@
 | ☐ | **Hélène Gruter** | Gruter (St-Marc) | « Vous pouvez foncer les yeux fermés ! » |  |
 | ☐ | **DAVID GUILLERMO** | Guillermo | « Un atout majeur de votre maison » |  |
 | ☐ | **Fabienne Bongiovanni** | Bongiovanni | « Chantier terminé dans les temps » |  |
-| ☐ | **Muriel Baccigalupo Sexologue** | — | « Une vraie plus-value pour la maison » |  |
+| ✅ | **Muriel Baccigalupo Sexologue** | — | « Une vraie plus-value pour la maison » | **Story jeu. 16 juil. 2026** |
 | ☐ | **Fred Fredo** | — | « Pari tenu » (délais avant les vacances) |  |
 | ☐ | **Anne CAYRON** | — | « Des artisans rigoureux, des délais respectés » |  |
 | ☐ | **Catherine Tonda** | — | « Des conseils avisés et un suivi » |  |

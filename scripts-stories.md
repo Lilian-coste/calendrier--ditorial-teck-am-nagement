@@ -38,7 +38,7 @@ Aucune story le **mardi** (post photo) ni le **vendredi** (reel). Le **14 juille
 | S8 | Une douche dehors, sans être vu | Spencer |
 | S-MILLI | Tout se joue au millimètre | Bongiovanni |
 | S9 | Un bois qui ne demande **AUCUN ENTRETIEN** | Gruter |
-| S2 | Avis client — Jean-Luc Vinet | Goguet Vinet |
+| S2 | Avis client — **Muriel Baccigalupo** | sa photo Google |
 | S10 | Avis client — Hélène Gruter | Gruter |
 
 ---
@@ -92,10 +92,13 @@ Notre bois exotique garde sa teinte et sa chaleur au fil des saisons, sans le po
 
 Lilian refait les cartes ailleurs pour un rendu plus soigné. Les fonds sont bons.
 
-**S2 — Jean-Luc Vinet** (chantier Goguet Vinet)
-> **« Nous en avions rêvé, Teck Aménagement l'a fait ! »**
-> *« Pour nous un gros projet, terrasse, salon enterré, pergola… et donc un tas de craintes. Dès la première visite, Franck Joncheray assure et nous rassure ! Rigueur, expertise, créativité sont au rendez-vous. […] Une équipe qui dit ce qu'elle fait et fait ce qu'elle dit. »*
-> ⚠️ La coupe […] est **obligatoire** : l'original contient une pique contre les concurrents.
+**S2 — Muriel Baccigalupo** (5★, 03/03/2026) · ✅ **MAQUETTE FAITE** → [S2-avis-muriel.jpg](stories-maquettes/S2-avis-muriel.jpg)
+> **« Une superbe pergola, très design… à la hauteur de nos espérances. »**
+> *« Une vraie plus value pour la maison. Une entreprise sérieuse et réactive qui a respecté tous ses engagements. »*
+> Photo : `unnamed_003_6pcK.jpg` (photo jointe à son avis Google). Aucune ville affichée : elle n'est pas dans l'avis, on ne l'invente pas.
+> **Design :** carte bento façon Apple (fond #F5F5F7, carte blanche arrondie, 5 étoiles bleues, avatar à initiales), sur le modèle fourni par Lilian le 16/07.
+
+> **Remplace Jean-Luc Vinet**, qui reste disponible pour un autre jeudi : *« Nous en avions rêvé, Teck Aménagement l'a fait ! »* — ⚠️ la coupe […] y est **obligatoire**, l'original contient une pique contre les concurrents.
 
 **S10 — Hélène Gruter** (son propre chantier)
 > **« Écoute, conseils, réactivité, travail impeccable. »**
