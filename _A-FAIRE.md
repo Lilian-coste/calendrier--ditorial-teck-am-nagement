@@ -18,6 +18,13 @@ Le bois est **l'élément phare** de Teck. Dès qu'on en parle, il faut **faire 
 - [ ] **Produire un mini-film / court-métrage autour du bois**, très esthétique et élégant. Format et durée à cadrer, mais l'exigence est claire : lumière, matière, rythme, son. C'est un projet à part entière, pas un reel.
 - ⛔ **Règle qui en découle :** tant que ce film n'existe pas, **on ne produit aucun contenu « bois » au rabais**. Le bois ne se traite pas dans un format court bâclé.
 
+## 🔔 Rappels email (mis en place le 03/08/2026)
+
+Un email 1h puis 10 min avant chaque publication → lilian.coste@gmail.com. Détail dans [RAPPELS.md](RAPPELS.md).
+
+- [ ] **Ajouter le secret `RESEND_API_KEY` sur GitHub** ([lien direct](https://github.com/Lilian-coste/calendrier--ditorial-teck-am-nagement/settings/secrets/actions)). Sans lui, le cron échoue à partir de demain matin. Les rappels du 3 août au soir sont déjà programmés à la main.
+- [ ] Un email de test parasite **« TEST A ANNULER » partira le 23 août à 10h**. La clé Resend étant restreinte à l'envoi, il n'a pas pu être annulé. À ignorer.
+
 ## 🔴 Lilian → Franck
 
 - [x] ~~Le process atelier~~ — sans objet, le reel « bois » est abandonné et remplacé par le reel 3D.
