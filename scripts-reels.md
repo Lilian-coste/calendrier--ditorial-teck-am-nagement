@@ -25,11 +25,13 @@
 
 ---
 
-## Reel #1 — « La vidéo du thermomètre » 🔥 Chaleur · ✅ DÉJÀ TOURNÉE
+## Reel #1 — « La vidéo du thermomètre » 🔥 Chaleur · ⏳ TOURNAGE À CONFIRMER
 
 **Répond à :** « Une pergola, ça change vraiment quelque chose contre la chaleur ? »
 
-> **Pas de script à écrire.** On reprend **la vidéo que Franck a déjà tournée avec le thermomètre** : elle montre l'écart de température entre le plein soleil et l'ombre de la pergola, c'est exactement la preuve recherchée. On la monte telle quelle, on ajoute le texte à l'écran et on publie avec la légende ci-dessous.
+> ⚠️ **À confirmer avec Franck (Lilian, 03/08/2026) :** ce script partait du principe que la vidéo était **déjà tournée**. Lilian indique qu'elle ne l'est pas. Tant que ce n'est pas tranché, le reel est considéré comme à tourner, et le Reel #3 perd sa preuve incrustée.
+>
+> **Pas de script à écrire.** On reprend **la vidéo du thermomètre de Franck** : elle montre l'écart de température entre le plein soleil et l'ombre de la pergola, c'est exactement la preuve recherchée. On la monte telle quelle, on ajoute le texte à l'écran et on publie avec la légende ci-dessous.
 >
 > C'est la même vidéo qui sert de preuve incrustée dans le **Reel #3** (plan 34-45 s).
 
@@ -53,7 +55,7 @@
 > 🎬 **Décision : le bois mérite un court-métrage, pas un reel.**
 > On ne traite plus le bois dans un format reel classique. Lilian veut produire un **mini-film / court-métrage très esthétique et élégant** autour du bois. C'est un projet à part, avec son propre niveau d'exigence (lumière, matière, rythme, son). Tant qu'il n'est pas fait, **on ne fait aucun contenu « bois » au rabais**.
 >
-> Conséquence : le créneau du **vendredi 14 août** est repris par le reel ci-dessous.
+> Conséquence : le créneau du **vendredi 4 septembre** est repris par le reel ci-dessous.
 
 ---
 

@@ -35,36 +35,42 @@ Aucun format ne tombe le même jour qu'un autre, pour ne pas se cannibaliser.
 | **mar. 14 juil. · 11h** | Bon 14 juillet (**exception ponctuelle**) | ✅ Maquette prête |
 | jeu. 16 juil. · 19h | **Avis client · Jean-Luc Vinet** | ⏳ Carte témoignage à faire |
 | lun. 20 juil. · 18h | Une douche dehors, sans être vu | ✅ Maquette prête |
-| jeu. 23 juil. · 19h | Un bois qui ne demande aucun entretien | ✅ Prépare le Reel #3 du lendemain |
-| lun. 27 juil. · 18h | Le détail qu'on ne voit qu'au soleil | ✅ Maquette prête |
-| jeu. 30 juil. · 19h | L'ombre n'est pas l'obscurité | ✅ Prépare le Reel #7 du lendemain |
-| lun. 3 août · 18h | Le moment où la structure devient un lieu | ✅ Maquette prête |
-| jeu. 6 août · 19h | **Avis client · Hélène Gruter** | ⏳ Carte témoignage à faire |
-| lun. 10 août · 18h | Tout se joue au millimètre | ✅ Maquette prête |
-| jeu. 13 août · 19h | Teck Aménagement, ce n'est pas que la pergola | ✅ Maquette prête |
-| lun. 17 août · 18h | Elle ne s'ajoute pas à la maison, elle la prolonge | ✅ Maquette prête |
-| jeu. 20 août · 19h | Habiller votre pergola (4 équipements) | ✅ Maquette prête |
-| lun. 24 août · 18h | Nos pergolas n'ont pas de limite de longueur | ✅ Maquette prête |
+| jeu. 23 juil. · 19h | Un bois qui ne demande aucun entretien | ✅ Maquette prête |
+| lun. 3 août · 18h | Le détail qu'on ne voit qu'au soleil | ✅ Maquette prête |
+| jeu. 6 août · 19h | L'ombre n'est pas l'obscurité | ✅ Maquette prête |
+| lun. 10 août · 18h | Le moment où la structure devient un lieu | ✅ Maquette prête |
+| jeu. 13 août · 19h | **Avis client · Hélène Gruter** | ⏳ Carte témoignage à faire |
+| lun. 17 août · 18h | Tout se joue au millimètre | ✅ Maquette prête |
+| jeu. 20 août · 19h | Teck Aménagement, ce n'est pas que la pergola | ✅ Maquette prête |
+| lun. 24 août · 18h | Elle ne s'ajoute pas à la maison, elle la prolonge | ✅ Maquette prête |
+| jeu. 27 août · 19h | Habiller votre pergola (4 équipements) | ✅ Maquette prête |
+| lun. 31 août · 18h | Nos pergolas n'ont pas de limite de longueur | ✅ Maquette prête |
 
-> Les 2 stories avis tombent un jeudi. Les autres jeudis sont pris par les stories qui préparent le reel du vendredi, parce que l'enchaînement story → reel est plus fort éditorialement. Dès que d'autres cartes témoignage seront prêtes, on reviendra à une alternance stricte un jeudi sur deux.
+> **Décalage du 03/08/2026 :** à partir de la story #6 (« Le détail qu'on ne voit qu'au soleil »), tout glisse d'une semaine, cette story étant publiée la semaine du 3 août.
+
+> ⚠️ **Enchaînement story → reel à réaligner.** Les stories « Un bois qui ne demande aucun entretien » et « L'ombre n'est pas l'obscurité » ne tombent plus la veille des Reels #3 et #7, qui sont reportés aux 14 et 21 août. Les 2 stories avis tombent un jeudi. Dès que d'autres cartes témoignage seront prêtes, on reviendra à une alternance stricte un jeudi sur deux.
 
 ### Les 5 reels, un par vendredi
 
 | Date | Reel | Statut |
 |---|---|---|
-| ven. 17 juil. · 19h | **#1 — La vidéo du thermomètre** | ✅ Déjà tournée, à monter |
-| ven. 24 juil. · 19h | **#3 — Le bois et l'entretien** (+ preuve -13°) | ✅ Prêt à tourner |
-| ven. 31 juil. · 19h | **#7 — La luminosité** (+ citation de Mathieu) | ✅ Prêt à tourner |
-| ven. 7 août · 19h | **#6 — Les 4 détails d'un projet réussi** | ✅ Prêt à tourner |
-| ven. 14 août · 19h | **#2 — Visitez votre pergola avant qu'elle existe** (3D) | ✅ Prêt à monter · remplace le reel « bois », abandonné |
+| ven. 7 août · 19h | **#1 — La vidéo du thermomètre** | ⏳ À tourner (Lilian, 03/08/2026) · ⚠️ voir note |
+| ven. 14 août · 19h | **#3 — Le bois et l'entretien** (+ preuve -13°) | ✅ Prêt à tourner |
+| ven. 21 août · 19h | **#7 — La luminosité** (+ citation de Mathieu) | ✅ Prêt à tourner |
+| ven. 28 août · 19h | **#6 — Les 4 détails d'un projet réussi** | ✅ Prêt à tourner |
+| ven. 4 sept. · 19h | **#2 — Visitez votre pergola avant qu'elle existe** (3D) | ✅ Prêt à monter · remplace le reel « bois », abandonné |
+
+> **Décalage du 03/08/2026 :** les 5 reels glissent de 3 semaines, le client n'ayant pas encore pu tourner. Le Reel #1 ouvre la série le vendredi 7 août et le Reel #2 bascule sur septembre.
+
+> ⚠️ **Contradiction à trancher sur le Reel #1.** Le script et le calendrier disaient « vidéo déjà tournée par Franck, il n'y a plus qu'à la monter ». Lilian indique le 03/08/2026 qu'elle n'a pas été tournée. À confirmer avec Franck, sachant que le même rush sert de preuve incrustée dans le Reel #3.
 
 > Scripts complets : [scripts-reels.md](scripts-reels.md) · PDF client : [pdf/](pdf/)
 
-### Semaine type (exemple, semaine du 13 juillet)
+### Semaine type (exemple, semaine du 3 août)
 
-| Lundi 13 | Mardi 14 | Jeudi 16 | Vendredi 17 |
+| Lundi 3 | Mardi 4 | Jeudi 6 | Vendredi 7 |
 |---|---|---|---|
-| Story valeur | **Post #2** (déjeuner à l'ombre) | Story **avis client** | **Reel #1** (thermomètre) |
+| Story « Le détail qu'on ne voit qu'au soleil » | **Post #5** (focus claustra) | Story « L'ombre n'est pas l'obscurité » | **Reel #1** (thermomètre) |
 
 ---
 
