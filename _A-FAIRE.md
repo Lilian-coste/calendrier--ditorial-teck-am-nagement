@@ -5,7 +5,9 @@
 ## 📅 Décalage du planning (03/08/2026)
 
 - **Stories** : à partir de la #6 (« Le détail qu'on ne voit qu'au soleil »), tout glisse d'**une semaine**. La #6 passe au lundi 3 août, la dernière (#14) au lundi 31 août.
+- **Posts photo** : à partir du #4 (« S'intègre à toute maison », non publié le 28 juillet), tout glisse d'**une semaine**. Le #4 passe au **mardi 4 août**, le #8 au **mardi 1er septembre**.
 - **Reels** : les 5 reels glissent de **3 semaines**, le client n'ayant pas encore pu tourner. Le #1 ouvre la série le **vendredi 7 août**, le #2 bascule au **vendredi 4 septembre**.
+- ✅ Le rythme de la semaine est intact à partir du 3 août : story le lundi, post le mardi, story le jeudi, reel le vendredi.
 - [ ] ⚠️ **Reel #1 : tourné ou pas ?** Le script disait « déjà tournée par Franck ». Lilian indique le 03/08 que non. À trancher avec Franck, le même rush servant de preuve incrustée dans le reel #3.
 - [ ] ⚠️ **Enchaînement story → reel cassé.** Les stories « Un bois qui ne demande aucun entretien » et « L'ombre n'est pas l'obscurité » ne tombent plus la veille des reels #3 et #7. À réaligner si on veut garder le couplage.
 

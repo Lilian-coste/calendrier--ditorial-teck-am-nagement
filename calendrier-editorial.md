@@ -70,7 +70,7 @@ Aucun format ne tombe le même jour qu'un autre, pour ne pas se cannibaliser.
 
 | Lundi 3 | Mardi 4 | Jeudi 6 | Vendredi 7 |
 |---|---|---|---|
-| Story « Le détail qu'on ne voit qu'au soleil » | **Post #5** (focus claustra) | Story « L'ombre n'est pas l'obscurité » | **Reel #1** (thermomètre) |
+| Story « Le détail qu'on ne voit qu'au soleil » | **Post #4** (s'intègre à toute maison) | Story « L'ombre n'est pas l'obscurité » | **Reel #1** (thermomètre) |
 
 ---
 
@@ -81,13 +81,15 @@ Aucun format ne tombe le même jour qu'un autre, pour ne pas se cannibaliser.
 | 1 | ven. 10 juil. 2026 | 19h00 | Daybed · bois exotique | Planifié |
 | 2 | mar. 14 juil. 2026 | 18h00 | Déjeuner à l'ombre | Planifié |
 | 3 | mar. 21 juil. 2026 | 18h00 | Confort et fraîcheur | Planifié |
-| 4 | mar. 28 juil. 2026 | 18h00 | S'intègre à toute maison | Planifié |
-| 5 | mar. 4 août 2026 | 18h00 | Focus claustra | Planifié |
-| 6 | mar. 11 août 2026 | 18h00 | Personnalisation / sur-mesure | Planifié |
-| 7 | mar. 18 août 2026 | 18h00 | Coin d'ombre piscine | Planifié |
-| 8 | mar. 25 août 2026 | 18h00 | Contre-plongée, rêver du bois | Planifié |
+| 4 | mar. 4 août 2026 | 18h00 | S'intègre à toute maison | Planifié |
+| 5 | mar. 11 août 2026 | 18h00 | Focus claustra | Planifié |
+| 6 | mar. 18 août 2026 | 18h00 | Personnalisation / sur-mesure | Planifié |
+| 7 | mar. 25 août 2026 | 18h00 | Coin d'ombre piscine | Planifié |
+| 8 | mar. 1er sept. 2026 | 18h00 | Contre-plongée, rêver du bois | Planifié |
 
-> **Couverture :** 8 posts → du 10 juillet au **25 août 2026**, à raison d'1 post/semaine. ✅
+> **Couverture :** 8 posts → du 10 juillet au **1er septembre 2026**, à raison d'1 post/semaine. ✅
+
+> **Décalage du 03/08/2026 :** le post #4 n'ayant pas été publié le 28 juillet, il passe au mardi 4 août et les posts suivants glissent d'une semaine. Le #8 bascule sur septembre.
 
 ---
 
@@ -160,7 +162,7 @@ Teck Aménagement... Une nouvelle gamme de pergolas pour sublimer votre extérie
 
 ---
 
-## #4 — mar. 28 juil. · 18h00 · S'intègre à toute maison
+## #4 — mar. 4 août · 18h00 · S'intègre à toute maison
 
 ![Post 4](assets/_LVM1674.jpg)
 
@@ -180,7 +182,7 @@ Teck Aménagement... Une nouvelle gamme de pergolas pour sublimer votre extérie
 
 ---
 
-## #5 — mar. 4 août · 18h00 · Focus claustra
+## #5 — mar. 11 août · 18h00 · Focus claustra
 
 ![Post 5](assets/08-maison-claustra.jpg)
 
@@ -204,7 +206,7 @@ Teck Aménagement... Une nouvelle gamme de pergolas pour sublimer votre extérie
 
 ---
 
-## #6 — mar. 11 août · 18h00 · Personnalisation / sur-mesure
+## #6 — mar. 18 août · 18h00 · Personnalisation / sur-mesure
 
 ![Post 6](assets/07-kar-villa-artdeco.jpg)
 
@@ -226,7 +228,7 @@ Teck Aménagement... Une nouvelle gamme de pergolas pour sublimer votre extérie
 
 ---
 
-## #7 — mar. 18 août · 18h00 · Coin d'ombre au bord de la piscine
+## #7 — mar. 25 août · 18h00 · Coin d'ombre au bord de la piscine
 
 ![Post 7](assets/_LVM1690.jpg)
 
@@ -246,7 +248,7 @@ Teck Aménagement... Une nouvelle gamme de pergolas pour sublimer votre extérie
 
 ---
 
-## #8 — mar. 25 août · 18h00 · Contre-plongée, rêver du bois
+## #8 — mar. 1er sept. · 18h00 · Contre-plongée, rêver du bois
 
 ![Post 8](assets/09-transat.jpg)
 

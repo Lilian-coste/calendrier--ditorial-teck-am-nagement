@@ -236,7 +236,7 @@ ${CREDIT_M}
 #TeckAménagement #PergolaSurMesure #ArtDeRecevoir #TerrasseOmbragée #Provence` },
 
   { id:"p5", type:"post", num:7, img:"assets/_LVM1690.jpg", angle:"Coin d'ombre au bord de la piscine",
-    status:"planifie", date:"2026-08-18", heure:"18h00",
+    status:"planifie", date:"2026-08-25", heure:"18h00",
     cap:`Après la baignade, l'ombre vous attend à deux pas de l'eau.
 
 Juste à côté de la piscine, la pergola crée un coin frais où l'on se pose sans quitter le bord.
@@ -250,7 +250,7 @@ ${CREDIT_M}
 #TeckAménagement #PergolaSurMesure #Piscine #ConfortExtérieur #Provence` },
 
   { id:"p6", type:"post", num:4, img:"assets/_LVM1674.jpg", angle:"S'intègre à toute maison",
-    status:"planifie", date:"2026-07-28", heure:"18h00",
+    status:"planifie", date:"2026-08-04", heure:"18h00",
     cap:`Peur qu'une pergola dénature votre maison ? C'est tout l'inverse.
 
 Quel que soit le style de votre façade, nous la dessinons pour épouser votre architecture.
@@ -264,7 +264,7 @@ ${CREDIT}
 #TeckAménagement #PergolaSurMesure #ArchitectureExtérieure #AménagementExtérieur #Provence` },
 
   { id:"p7", type:"post", num:6, img:"assets/07-kar-villa-artdeco.jpg", angle:"Personnalisation / sur-mesure",
-    status:"planifie", date:"2026-08-11", heure:"18h00",
+    status:"planifie", date:"2026-08-18", heure:"18h00",
     cap:`Aucune de nos pergolas ne ressemble à une autre.
 
 Celle-ci a été dessinée pour cette villa, ses courbes et son style unique.
@@ -278,7 +278,7 @@ ${CREDIT}
 #TeckAménagement #PergolaSurMesure #BoisExotique #DesignExtérieur #Provence` },
 
   { id:"p8", type:"post", num:5, img:"assets/08-maison-claustra.jpg", angle:"Focus claustra",
-    status:"planifie", date:"2026-08-04", heure:"18h00",
+    status:"planifie", date:"2026-08-11", heure:"18h00",
     cap:`Le claustra, c'est ce détail qui fait toute la différence.
 
 Ces fins carrelets de bois filtrent le regard et la lumière sans jamais enfermer l'espace.
@@ -294,7 +294,7 @@ ${CREDIT}
 #TeckAménagement #Claustra #BriseVue #BoisExotique #Provence` },
 
   { id:"p9", type:"post", num:8, img:"assets/09-transat.jpg", angle:"Contre-plongée · Rêver du bois",
-    status:"planifie", date:"2026-08-25", heure:"18h00",
+    status:"planifie", date:"2026-09-01", heure:"18h00",
     warn:"",
     cap:`Et si c'était vous, allongé sur votre transat, le regard levé vers le bois de votre pergola ?
 
@@ -474,10 +474,11 @@ const STATUS = {
   aproduire:{label:"À produire", color:"#7c5cbf"},
 };
 
-// v5 : décalage des stories (#6 → #14, +1 semaine) et des reels (#1 au 7 août, +3 semaines).
+// v6 : décalage des stories (#6 → #14, +1 semaine), des posts photo (#4 → #8, +1 semaine)
+// et des reels (#1 au 7 août, +3 semaines).
 // La clé change de version pour que le nouveau planning s'applique aussi chez les visiteurs
 // qui ont déjà ouvert le calendrier (sinon leur localStorage garderait les anciennes dates).
-const KEY="teck_ig_cal_v5";
+const KEY="teck_ig_cal_v6";
 let state = JSON.parse(localStorage.getItem(KEY) || "{}");
 POSTS.forEach(p=>{ if(!state[p.id]) state[p.id]={status:p.status, date:p.date||"", heure:p.heure||""}; });
 function save(){ localStorage.setItem(KEY, JSON.stringify(state)); }
