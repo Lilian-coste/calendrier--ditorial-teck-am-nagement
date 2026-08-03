@@ -1,0 +1,78 @@
+# Rappels de publication Instagram — Teck Aménagement
+#
+# Chaque matin, programme chez Resend les rappels des publications des
+# prochaines 24 heures : un email 1 heure avant, un autre 10 minutes avant.
+# Tout se passe sur les serveurs GitHub et Resend, donc les rappels partent
+# même quand le Mac de Lilian est éteint.
+#
+# Les entrées manuelles passent par `env` et jamais par interpolation directe
+# dans le `run`, pour qu'aucune valeur saisie ne puisse être interprétée
+# comme une commande.
+
+name: Rappels de publication
+
+on:
+  schedule:
+    # 03:00 UTC, soit 05:00 à Paris en été. Toutes les publications ont lieu
+    # entre 11h et 19h, leurs rappels tombent donc bien dans la fenêtre du jour.
+    # CRON_HOUR_UTC dans le script doit rester aligné sur cette heure.
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Simuler sans rien envoyer"
+        type: boolean
+        default: false
+      hours:
+        description: "Largeur de la fenêtre, en heures"
+        type: string
+        default: "24"
+      from_now:
+        description: "Partir de maintenant au lieu de l'heure de cron"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+# Deux exécutions simultanées programmeraient les mêmes rappels en double.
+concurrency:
+  group: rappels-publication
+  cancel-in-progress: false
+
+jobs:
+  programmer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Programmer les rappels
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          DRY_RUN: ${{ inputs.dry_run }}
+          FROM_NOW: ${{ inputs.from_now }}
+          HOURS: ${{ inputs.hours }}
+        run: |
+          set -euo pipefail
+
+          if [ -z "${RESEND_API_KEY}" ]; then
+            echo "::error::Le secret RESEND_API_KEY n'est pas configuré sur ce dépôt."
+            exit 1
+          fi
+
+          ARGS=()
+          [ "${DRY_RUN:-false}" = "true" ] && ARGS+=("--dry-run")
+          [ "${FROM_NOW:-false}" = "true" ] && ARGS+=("--from-now")
+
+          # La largeur de fenêtre est validée avant usage : uniquement des chiffres.
+          HEURES="${HOURS:-24}"
+          case "${HEURES}" in
+            ''|*[!0-9]*) HEURES=24 ;;
+          esac
+          ARGS+=("--hours=${HEURES}")
+
+          node scripts/rappels-publication.mjs "${ARGS[@]}"
