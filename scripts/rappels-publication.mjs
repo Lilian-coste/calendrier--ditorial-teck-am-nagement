@@ -340,6 +340,46 @@ function prefixeErreur() {
   return process.env.GITHUB_ACTIONS === "true" ? "::error::" : "";
 }
 
+/**
+ * Vérifie que la clé est acceptée par Resend, sans envoyer le moindre email.
+ *
+ * Utile en simulation : jusqu'ici le mode `--dry-run` n'appelait jamais Resend,
+ * il ne pouvait donc pas détecter une clé invalide. C'est ce qui a permis au
+ * secret mal collé de passer inaperçu jusqu'au premier vrai cron.
+ *
+ * Réponses attendues :
+ *   200 — clé complète ;
+ *   401 « restricted to only send emails » — clé d'envoi valide, le cas normal ;
+ *   400 « API key is invalid » — clé fausse, tronquée ou mal collée.
+ */
+async function verifierCle() {
+  let cle;
+  try {
+    cle = cleResend();
+  } catch (erreur) {
+    console.error(`${prefixeErreur()}${erreur.message}`);
+    return false;
+  }
+
+  const reponse = await fetch("https://api.resend.com/domains", {
+    headers: { Authorization: `Bearer ${cle}` },
+  });
+  const corps = await reponse.json().catch(() => ({}));
+  const message = corps.message || "";
+
+  if (reponse.status === 200 || /restricted/i.test(message)) {
+    console.log(`Cle Resend valide (${cle.length} caracteres).`);
+    return true;
+  }
+
+  console.error(
+    `${prefixeErreur()}Cle Resend refusee : ${reponse.status} ${message}. ` +
+      "Verifie la valeur du secret RESEND_API_KEY : elle ne doit contenir " +
+      "ni backslash, ni espace, ni retour a la ligne."
+  );
+  return false;
+}
+
 async function main() {
   const args = process.argv.slice(2);
   const simulation = args.includes("--dry-run");
@@ -373,6 +413,13 @@ async function main() {
   console.log(
     `Fenetre : ${afficherParis(debut, fmt)} -> ${afficherParis(fin, fmt)} (heure de Paris).`
   );
+
+  // En simulation, on contrôle la clé même quand la fenêtre est vide : c'est ce
+  // qui rend le « Run workflow » en mode simulation réellement probant, sans
+  // envoyer ni programmer quoi que ce soit.
+  if (simulation && !(await verifierCle())) {
+    process.exitCode = 1;
+  }
 
   if (rappels.length === 0) {
     console.log("Aucun rappel a programmer sur cette fenetre.");
