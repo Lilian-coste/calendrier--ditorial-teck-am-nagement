@@ -282,13 +282,27 @@ function echapper(texte) {
 // Envoi
 // ---------------------------------------------------------------------------
 
+/**
+ * Nettoie une clé API brute.
+ *
+ * Les backslashes sont retirés : la clé est stockée dans un fichier `.md` où
+ * les underscores sont échappés par la syntaxe markdown (`re\_Hf…`). Copier ce
+ * fichier tel quel donne donc une clé que Resend refuse avec « API key is
+ * invalid ». C'est exactement ce qui a fait échouer le cron du 4 août 2026 :
+ * la valeur collée dans le secret GitHub contenait les deux backslashes.
+ * Aucune clé Resend n'en contient, les retirer est donc sans risque.
+ */
+function nettoyerCle(brut) {
+  return String(brut).replace(/\\/g, "").trim();
+}
+
 /** Récupère la clé API : variable d'environnement en CI, fichier local sinon. */
 function cleResend() {
-  if (process.env.RESEND_API_KEY) return process.env.RESEND_API_KEY.trim();
+  if (process.env.RESEND_API_KEY) return nettoyerCle(process.env.RESEND_API_KEY);
 
   const local = path.join(os.homedir(), ".veille-keys", "Clé API Resend pour taskboard lilian.md");
   if (fs.existsSync(local)) {
-    return fs.readFileSync(local, "utf8").replace(/\\/g, "").trim();
+    return nettoyerCle(fs.readFileSync(local, "utf8"));
   }
   throw new Error(
     "Cle Resend introuvable. Renseigne RESEND_API_KEY " +
@@ -320,6 +334,11 @@ async function programmer(rappel, cle) {
 // ---------------------------------------------------------------------------
 // Point d'entrée
 // ---------------------------------------------------------------------------
+
+/** Sur GitHub Actions, ce préfixe transforme la ligne en annotation d'échec. */
+function prefixeErreur() {
+  return process.env.GITHUB_ACTIONS === "true" ? "::error::" : "";
+}
 
 async function main() {
   const args = process.argv.slice(2);
@@ -378,7 +397,10 @@ async function main() {
       console.log(`OK ${ligne} — Resend ${id}`);
       envoyes++;
     } catch (erreur) {
-      console.error(`ECHEC ${ligne} — ${erreur.message}`);
+      // Le préfixe `::error::` fait remonter la cause dans les annotations du
+      // job. Sans lui, l'échec du 4 août 2026 n'affichait que « exit code 1 »
+      // et il fallait ouvrir les logs pour comprendre.
+      console.error(`${prefixeErreur()}ECHEC ${ligne} — ${erreur.message}`);
       echecs.push(erreur.message);
     }
   }
@@ -393,6 +415,6 @@ async function main() {
 }
 
 main().catch((erreur) => {
-  console.error(`Echec : ${erreur.message}`);
+  console.error(`${prefixeErreur()}Echec : ${erreur.message}`);
   process.exit(1);
 });

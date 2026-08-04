@@ -5,6 +5,8 @@ Aucune story le **mardi** (post photo) ni le **vendredi** (reel). Le **14 juille
 
 **Les 12 maquettes sont faites** dans [stories-maquettes/](stories-maquettes/), en 1080×1920, prêtes à publier.
 
+> 🛠️ **Pour (re)générer une story :** `stories-maquettes/_generateur-stories.py` (valeur/info) ou `_source-S2-avis-muriel.py` (carte témoignage). Ils encodent la DA exacte et rendent au pixel près. Ne jamais refaire une maquette à la main.
+
 ---
 
 ## 🎯 Les règles d'écriture

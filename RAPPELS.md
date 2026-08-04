@@ -61,6 +61,13 @@ La clé API vient de `RESEND_API_KEY`, sinon du fichier
 `~/.veille-keys/Clé API Resend pour taskboard lilian.md`. **Elle n'est jamais
 écrite dans le dépôt.**
 
+> **Le piège du fichier `.md`.** Ce fichier échappe les underscores à la mode
+> markdown : il contient `re\_Hf…` et non `re_Hf…`. Coller son contenu tel quel
+> dans un secret donne une clé que Resend refuse avec « API key is invalid ».
+> C'est ce qui a fait échouer le cron du 4 août 2026. Le script retire donc les
+> backslashes des deux sources, fichier comme variable d'environnement, et la
+> valeur du secret n'a pas à être retouchée.
+
 ## Installation (une seule action manuelle)
 
 Ajouter le secret sur GitHub, sinon le cron échoue :
