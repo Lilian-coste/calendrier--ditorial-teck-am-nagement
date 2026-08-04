@@ -22,7 +22,8 @@ Le bois est **l'élément phare** de Teck. Dès qu'on en parle, il faut **faire 
 
 Un email 1h puis 10 min avant chaque publication → lilian.coste@gmail.com. Détail dans [RAPPELS.md](RAPPELS.md).
 
-- [ ] **Ajouter le secret `RESEND_API_KEY` sur GitHub** ([lien direct](https://github.com/Lilian-coste/calendrier--ditorial-teck-am-nagement/settings/secrets/actions)). Sans lui, le cron échoue à partir de demain matin. Les rappels du 3 août au soir sont déjà programmés à la main.
+- [ ] 🔴 **Ajouter le secret `RESEND_API_KEY` sur GitHub** ([lien direct](https://github.com/Lilian-coste/calendrier--ditorial-teck-am-nagement/settings/secrets/actions)). **Confirmé le 04/08 : le cron a échoué ce matin à 05h faute de ce secret** (mail GitHub « All jobs have failed », job arrêté en 12 s). Les rappels du post #4 du 4 août au soir ont été reprogrammés à la main.
+  - **Prochaine échéance : story #7 le jeudi 6 août à 19h.** Si le secret n'est pas posé avant le 6 au matin, relancer à la main : `node scripts/rappels-publication.mjs --from-now --hours=200`.
 - [ ] Un email de test parasite **« TEST A ANNULER » partira le 23 août à 10h**. La clé Resend étant restreinte à l'envoi, il n'a pas pu être annulé. À ignorer.
 
 ## 🔴 Lilian → Franck
