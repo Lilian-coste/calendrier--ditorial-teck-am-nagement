@@ -48,8 +48,16 @@ const RACINE = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 /** Destinataire des rappels. */
 const DESTINATAIRE = "lilian.coste@gmail.com";
 
-/** Expéditeur. onboarding@resend.dev n'écrit qu'au propriétaire du compte Resend, ce qui suffit ici. */
-const EXPEDITEUR = "Planning Instagram <onboarding@resend.dev>";
+/**
+ * Expéditeur, sur le domaine vérifié de Lilian.
+ *
+ * Avant le 7 août 2026 les rappels partaient de `onboarding@resend.dev`, le
+ * domaine de test partagé de Resend. Il a deux défauts qui ont coûté le rappel
+ * de la story #7 : Gmail le filtre lourdement, et il n'autorise l'envoi qu'au
+ * propriétaire du compte. Un domaine vérifié lève les deux limites et permet
+ * d'ajouter un jour d'autres destinataires que Lilian.
+ */
+const EXPEDITEUR = "Planning Instagram <rappels@buzznovawave.fr>";
 
 /** Combien de temps avant la publication chaque rappel part. */
 const RAPPELS = [
@@ -296,11 +304,18 @@ function nettoyerCle(brut) {
   return String(brut).replace(/\\/g, "").trim();
 }
 
-/** Récupère la clé API : variable d'environnement en CI, fichier local sinon. */
+/**
+ * Récupère la clé API : variable d'environnement en CI, fichier local sinon.
+ *
+ * C'est bien la clé du compte Resend **professionnel** qu'il faut : le domaine
+ * buzznovawave.fr n'est vérifié que sur celui-ci. La clé du compte personnel
+ * (`Clé API Resend pour taskboard lilian.md`) ferait échouer chaque envoi avec
+ * un refus de domaine.
+ */
 function cleResend() {
   if (process.env.RESEND_API_KEY) return nettoyerCle(process.env.RESEND_API_KEY);
 
-  const local = path.join(os.homedir(), ".veille-keys", "Clé API Resend pour taskboard lilian.md");
+  const local = path.join(os.homedir(), ".veille-keys", "Resend Clé API compte pro.txt");
   if (fs.existsSync(local)) {
     return nettoyerCle(fs.readFileSync(local, "utf8"));
   }

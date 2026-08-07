@@ -1,7 +1,8 @@
 # Rappels de publication par email
 
 Un email part **1 heure avant** puis **10 minutes avant** chaque publication
-(post photo, reel, story), vers **lilian.coste@gmail.com**.
+(post photo, reel, story), de **rappels@buzznovawave.fr** vers
+**lilian.coste@gmail.com**.
 
 Tout tourne sur GitHub et Resend : les rappels arrivent **même Mac éteint**.
 
@@ -57,24 +58,42 @@ node scripts/rappels-publication.mjs --dry-run --from-now --hours=800   # tout v
 node scripts/rappels-publication.mjs --from-now --hours=12              # programmer aujourd'hui
 ```
 
-La clé API vient de `RESEND_API_KEY`, sinon du fichier
-`~/.veille-keys/Clé API Resend pour taskboard lilian.md`. **Elle n'est jamais
-écrite dans le dépôt.**
+## Quel compte Resend
 
-> **Le piège du fichier `.md`.** Ce fichier échappe les underscores à la mode
-> markdown : il contient `re\_Hf…` et non `re_Hf…`. Coller son contenu tel quel
-> dans un secret donne une clé que Resend refuse avec « API key is invalid ».
-> C'est ce qui a fait échouer le cron du 4 août 2026. Le script retire donc les
-> backslashes des deux sources, fichier comme variable d'environnement, et la
-> valeur du secret n'a pas à être retouchée.
+Lilian a **deux comptes Resend**. Celui qui compte ici est le **professionnel** :
+c'est le seul où le domaine `buzznovawave.fr` est vérifié.
+
+| | |
+|---|---|
+| Clé à utiliser | `~/.veille-keys/Resend Clé API compte pro.txt` |
+| À ne **pas** utiliser | `~/.veille-keys/Clé API Resend pour taskboard lilian.md` (compte perso) |
+| En CI | secret GitHub `RESEND_API_KEY`, même valeur |
+
+La clé n'est **jamais écrite dans le dépôt**. Avec la clé du compte perso, chaque
+envoi échouerait : le domaine ne lui appartient pas.
+
+> **Un backslash suffit à tout casser.** Le script retire les backslashes de la
+> clé, quelle que soit sa source. C'est une protection héritée du cron du
+> 4 août 2026 : la clé était alors stockée dans un `.md`, où markdown échappe les
+> underscores (`re\_Hf…` au lieu de `re_Hf…`), et Resend la refusait avec
+> « API key is invalid ». Le fichier du compte pro est un `.txt`, donc épargné,
+> mais la protection reste utile si la clé repasse un jour par du markdown.
+
+## Historique de l'expéditeur
+
+Jusqu'au 7 août 2026 les rappels partaient de `onboarding@resend.dev`, le domaine
+de test partagé de Resend. Deux limites, qui ont coûté le rappel de la story #7
+du 6 août : Gmail filtre lourdement ce domaine, et Resend n'autorise l'envoi
+qu'au propriétaire du compte. Le passage à `rappels@buzznovawave.fr` lève les
+deux, et ouvre la possibilité d'ajouter d'autres destinataires que Lilian.
 
 ## Installation (une seule action manuelle)
 
-Ajouter le secret sur GitHub, sinon le cron échoue :
+Le secret est déjà posé. S'il faut le refaire un jour :
 
 1. `https://github.com/Lilian-coste/calendrier--ditorial-teck-am-nagement/settings/secrets/actions`
 2. **New repository secret**
 3. Nom : `RESEND_API_KEY`
-4. Valeur : la clé de `~/.veille-keys/Clé API Resend pour taskboard lilian.md`
+4. Valeur : la clé de `~/.veille-keys/Resend Clé API compte pro.txt`
 
 Puis vérifier avec un *Run workflow* en mode simulation.
