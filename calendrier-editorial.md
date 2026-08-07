@@ -48,19 +48,21 @@ Aucun format ne tombe le même jour qu'un autre, pour ne pas se cannibaliser.
 
 > **Décalage du 03/08/2026 :** à partir de la story #6 (« Le détail qu'on ne voit qu'au soleil »), tout glisse d'une semaine, cette story étant publiée la semaine du 3 août.
 
-> ⚠️ **Enchaînement story → reel à réaligner.** Les stories « Un bois qui ne demande aucun entretien » et « L'ombre n'est pas l'obscurité » ne tombent plus la veille des Reels #3 et #7, qui sont reportés aux 14 et 21 août. Les 2 stories avis tombent un jeudi. Dès que d'autres cartes témoignage seront prêtes, on reviendra à une alternance stricte un jeudi sur deux.
+> ⚠️ **Enchaînement story → reel à réaligner.** Les stories « Un bois qui ne demande aucun entretien » et « L'ombre n'est pas l'obscurité » ne tombent plus la veille des Reels #3 et #7, qui sont reportés aux 11 et 18 septembre. Les 2 stories avis tombent un jeudi. Dès que d'autres cartes témoignage seront prêtes, on reviendra à une alternance stricte un jeudi sur deux.
 
 ### Les 5 reels, un par vendredi
 
 | Date | Reel | Statut |
 |---|---|---|
-| ven. 7 août · 19h | **#1 — La vidéo du thermomètre** | ⏳ À tourner (Lilian, 03/08/2026) · ⚠️ voir note |
-| ven. 14 août · 19h | **#3 — Le bois et l'entretien** (+ preuve -13°) | ✅ Prêt à tourner |
-| ven. 21 août · 19h | **#7 — La luminosité** (+ citation de Mathieu) | ✅ Prêt à tourner |
-| ven. 28 août · 19h | **#6 — Les 4 détails d'un projet réussi** | ✅ Prêt à tourner |
-| ven. 4 sept. · 19h | **#2 — Visitez votre pergola avant qu'elle existe** (3D) | ✅ Prêt à monter · remplace le reel « bois », abandonné |
+| ven. 4 sept. · 19h | **#1 — La vidéo du thermomètre** | ⏳ À tourner (Lilian, 03/08/2026) · ⚠️ voir note |
+| ven. 11 sept. · 19h | **#3 — Le bois et l'entretien** (+ preuve -13°) | ✅ Prêt à tourner |
+| ven. 18 sept. · 19h | **#7 — La luminosité** (+ citation de Mathieu) | ✅ Prêt à tourner |
+| ven. 25 sept. · 19h | **#6 — Les 4 détails d'un projet réussi** | ✅ Prêt à tourner |
+| ven. 2 oct. · 19h | **#2 — Visitez votre pergola avant qu'elle existe** (3D) | ✅ Prêt à monter · remplace le reel « bois », abandonné |
 
-> **Décalage du 03/08/2026 :** les 5 reels glissent de 3 semaines, le client n'ayant pas encore pu tourner. Le Reel #1 ouvre la série le vendredi 7 août et le Reel #2 bascule sur septembre.
+> **Décalage du 07/08/2026 :** les 5 reels repartent en septembre (+4 semaines), le client étant en vacances jusqu'à la fin août. Le Reel #1 ouvre la série le vendredi 4 septembre et le Reel #2 ferme la série le vendredi 2 octobre. Les posts photo et les stories ne bougent pas : ils sont déjà produits et ne demandent rien au client.
+
+> **Décalage précédent du 03/08/2026 :** les 5 reels avaient déjà glissé de 3 semaines, le client n'ayant pas encore pu tourner.
 
 > ⚠️ **Contradiction à trancher sur le Reel #1.** Le script et le calendrier disaient « vidéo déjà tournée par Franck, il n'y a plus qu'à la monter ». Lilian indique le 03/08/2026 qu'elle n'a pas été tournée. À confirmer avec Franck, sachant que le même rush sert de preuve incrustée dans le Reel #3.
 
@@ -70,7 +72,9 @@ Aucun format ne tombe le même jour qu'un autre, pour ne pas se cannibaliser.
 
 | Lundi 3 | Mardi 4 | Jeudi 6 | Vendredi 7 |
 |---|---|---|---|
-| Story « Le détail qu'on ne voit qu'au soleil » | **Post #4** (s'intègre à toute maison) | Story « L'ombre n'est pas l'obscurité » | **Reel #1** (thermomètre) |
+| Story « Le détail qu'on ne voit qu'au soleil » | **Post #4** (s'intègre à toute maison) | Story « L'ombre n'est pas l'obscurité » | *(plus de reel : la série repart le 4 septembre)* |
+
+> **En août, pas de reel.** Le client est en vacances jusqu'à la fin du mois, donc rien à tourner. Les vendredis d'août restent libres et la série de reels démarre le vendredi 4 septembre.
 
 ---
 

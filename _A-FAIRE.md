@@ -1,13 +1,18 @@
 # ⏳ À faire — Instagram Teck Aménagement
 
-> Mis à jour le **03/08/2026**. Ce fichier existe pour qu'aucun point ne se perde entre deux conversations. Coche au fur et à mesure.
+> Mis à jour le **07/08/2026**. Ce fichier existe pour qu'aucun point ne se perde entre deux conversations. Coche au fur et à mesure.
 
-## 📅 Décalage du planning (03/08/2026)
+## 📅 Les reels repartent en septembre (07/08/2026)
+
+- **Le client est en vacances jusqu'à la fin août**, donc aucun tournage possible. Les 5 reels glissent de **4 semaines** : #1 le **vendredi 4 septembre**, #3 le **11**, #7 le **18**, #6 le **25**, #2 le **vendredi 2 octobre**.
+- **Pas de reel en août.** Les vendredis d'août restent libres.
+- **Posts photo et stories ne bougent pas** : ils sont déjà produits et ne demandent rien au client. Story le lundi, post le mardi, story le jeudi, et le vendredi reprend son reel à partir du 4 septembre.
+
+## 📅 Décalage précédent du planning (03/08/2026)
 
 - **Stories** : à partir de la #6 (« Le détail qu'on ne voit qu'au soleil »), tout glisse d'**une semaine**. La #6 passe au lundi 3 août, la dernière (#14) au lundi 31 août.
 - **Posts photo** : à partir du #4 (« S'intègre à toute maison », non publié le 28 juillet), tout glisse d'**une semaine**. Le #4 passe au **mardi 4 août**, le #8 au **mardi 1er septembre**.
-- **Reels** : les 5 reels glissent de **3 semaines**, le client n'ayant pas encore pu tourner. Le #1 ouvre la série le **vendredi 7 août**, le #2 bascule au **vendredi 4 septembre**.
-- ✅ Le rythme de la semaine est intact à partir du 3 août : story le lundi, post le mardi, story le jeudi, reel le vendredi.
+- **Reels** : les 5 reels avaient glissé de **3 semaines**, le client n'ayant pas encore pu tourner.
 - [ ] ⚠️ **Reel #1 : tourné ou pas ?** Le script disait « déjà tournée par Franck ». Lilian indique le 03/08 que non. À trancher avec Franck, le même rush servant de preuve incrustée dans le reel #3.
 - [ ] ⚠️ **Enchaînement story → reel cassé.** Les stories « Un bois qui ne demande aucun entretien » et « L'ombre n'est pas l'obscurité » ne tombent plus la veille des reels #3 et #7. À réaligner si on veut garder le couplage.
 
@@ -33,12 +38,12 @@ Un email 1h puis 10 min avant chaque publication → lilian.coste@gmail.com. Dé
 ## 🔴 Lilian → Franck
 
 - [x] ~~Le process atelier~~ — sans objet, le reel « bois » est abandonné et remplacé par le reel 3D.
-- [ ] **Reel #2 (vendredi 4 septembre) — vidéo motion design.** À réunir :
+- [ ] **Reel #2 (vendredi 2 octobre) — vidéo motion design.** À réunir :
   - les **rendus 3D** d'un projet dont on a **aussi les photos finales** (pour la comparaison haut / bas du dernier plan, au même cadrage) ;
   - une **capture vidéo de l'écran** pendant qu'on fait varier la lumière et les angles sur le rendu ;
   - un **rendu 3D qui tourne sur lui-même** (plan 2).
   - Fond motion design : blanc à points gris clair (façon Canva / Miro), **cercle au centre** qui garde ce fond, **couleur unie tout autour** pour centrer l'œil. Détail dans [scripts-reels.md](scripts-reels.md).
-- [ ] **« Nous vous répondrons dans la journée »** (reel #3, carte de fin) : est-ce que Franck peut **tenir cet engagement** ? Si non, on retire la phrase. Reel programmé le **vendredi 14 août**.
+- [ ] **« Nous vous répondrons dans la journée »** (reel #3, carte de fin) : est-ce que Franck peut **tenir cet engagement** ? Si non, on retire la phrase. Reel programmé le **vendredi 11 septembre**.
 - [ ] **La vidéo du test -13°** : récupérer le rush pour pouvoir l'incruster en bulle dans le reel #3. **Le chiffre ne doit jamais être cité sans la preuve à l'écran.**
 
 ✅ **Le claim d'exclusivité est validé** (« une solution qui nous est propre, que personne d'autre ne détient dans le sud de la France »). Plus rien à demander là-dessus.
@@ -54,4 +59,4 @@ Un email 1h puis 10 min avant chaque publication → lilian.coste@gmail.com. Dé
 
 - Aucune voile de coco dans les 8 posts programmés (vérifié par Lilian).
 - Les 12 maquettes de stories sont faites et validées (titre en capitales, texte en écriture normale).
-- Les 5 reels sont calés, un par vendredi, du 7 août au 4 septembre.
+- Les 5 reels sont calés, un par vendredi, du 4 septembre au 2 octobre.

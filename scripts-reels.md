@@ -55,7 +55,7 @@
 > 🎬 **Décision : le bois mérite un court-métrage, pas un reel.**
 > On ne traite plus le bois dans un format reel classique. Lilian veut produire un **mini-film / court-métrage très esthétique et élégant** autour du bois. C'est un projet à part, avec son propre niveau d'exigence (lumière, matière, rythme, son). Tant qu'il n'est pas fait, **on ne fait aucun contenu « bois » au rabais**.
 >
-> Conséquence : le créneau du **vendredi 4 septembre** est repris par le reel ci-dessous.
+> Conséquence : le créneau de clôture de la série, le **vendredi 2 octobre**, est repris par le reel ci-dessous.
 
 ---
 
