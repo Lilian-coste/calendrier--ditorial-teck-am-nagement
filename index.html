@@ -427,8 +427,8 @@ Nos pergolas ne sont pas un toit plein. La lumière passe entre les carrelets, d
 
 Dès que les carrelets de bois arrivent, la lumière se tamise et l'espace devient plus feutré, plus cosy. C'est là que la pergola cesse d'être une structure.` },
 
-  { id:"s10", type:"story", num:9, img:"", phLabel:"⭐ Carte témoignage à faire", angle:"Avis client · Hélène Gruter",
-    status:"aproduire", date:"2026-08-13", heure:"19h00",
+  { id:"s10", type:"story", num:15, img:"", phLabel:"⭐ Carte témoignage à faire", angle:"Avis client · Hélène Gruter",
+    status:"aproduire", date:"2026-09-03", heure:"19h00",
     cap:`« Écoute, conseils, réactivité, travail impeccable. »
 
 « Franck et son équipe sont exceptionnels. Un immense merci à eux de nous avoir si bien accompagnés dans notre projet d'aménagement extérieur autour de notre piscine. »
@@ -479,7 +479,11 @@ const STATUS = {
 // Les posts photo et les stories ne bougent pas.
 // La clé change de version pour que le nouveau planning s'applique aussi chez les visiteurs
 // qui ont déjà ouvert le calendrier (sinon leur localStorage garderait les anciennes dates).
-const KEY="teck_ig_cal_v7";
+// v8 : la story « Avis client · Hélène Gruter » passe du jeudi 13 août au jeudi
+// 3 septembre et devient la #15, sa carte témoignage n'étant toujours pas produite.
+// Elle prend le premier créneau story libre après la #14 du 31 août. Le #9 reste vide,
+// les stories suivantes gardant leurs numéros.
+const KEY="teck_ig_cal_v8";
 let state = JSON.parse(localStorage.getItem(KEY) || "{}");
 POSTS.forEach(p=>{ if(!state[p.id]) state[p.id]={status:p.status, date:p.date||"", heure:p.heure||""}; });
 function save(){ localStorage.setItem(KEY, JSON.stringify(state)); }

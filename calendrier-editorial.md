@@ -39,12 +39,14 @@ Aucun format ne tombe le même jour qu'un autre, pour ne pas se cannibaliser.
 | lun. 3 août · 18h | Le détail qu'on ne voit qu'au soleil | ✅ Maquette prête |
 | jeu. 6 août · 19h | L'ombre n'est pas l'obscurité | ✅ Maquette prête |
 | lun. 10 août · 18h | Le moment où la structure devient un lieu | ✅ Maquette prête |
-| jeu. 13 août · 19h | **Avis client · Hélène Gruter** | ⏳ Carte témoignage à faire |
 | lun. 17 août · 18h | Tout se joue au millimètre | ✅ Maquette prête |
 | jeu. 20 août · 19h | Teck Aménagement, ce n'est pas que la pergola | ✅ Maquette prête |
 | lun. 24 août · 18h | Elle ne s'ajoute pas à la maison, elle la prolonge | ✅ Maquette prête |
 | jeu. 27 août · 19h | Habiller votre pergola (4 équipements) | ✅ Maquette prête |
 | lun. 31 août · 18h | Nos pergolas n'ont pas de limite de longueur | ✅ Maquette prête |
+| jeu. 3 sept. · 19h | **Avis client · Hélène Gruter** (story #15) | ⏳ Carte témoignage à faire |
+
+> **Report du 17/08/2026 :** la story « Avis client · Hélène Gruter » quitte le jeudi 13 août pour le jeudi 3 septembre, sa carte témoignage n'étant toujours pas produite. Elle devient la **#15** et prend le premier créneau story libre après le 31 août. Les stories #10 à #14 gardent leurs numéros, il n'y a donc plus de story #9.
 
 > **Décalage du 03/08/2026 :** à partir de la story #6 (« Le détail qu'on ne voit qu'au soleil »), tout glisse d'une semaine, cette story étant publiée la semaine du 3 août.
 
