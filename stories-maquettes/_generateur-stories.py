@@ -26,6 +26,19 @@ LIGHT, REG, MEDIUM = 7, 0, 10
 BLEU, CLAIR = (6, 83, 168), (150, 196, 240)
 BLANC, INFO = (255, 255, 255), (238, 244, 252)
 DESCENTE = 130
+# Chaque story produite est aussi déposée ici, prête à envoyer à Franck.
+# Demandé par Lilian le 21/09/2026. Si le dossier n'existe pas, on ne dépose rien
+# et on le dit, plutôt que de le recréer en douce ailleurs.
+ENVOI = os.path.expanduser("~/Downloads/Envoyer à Franck")
+
+
+def enregistrer(im, fname):
+    im.save(os.path.join(OUT, fname), quality=92)
+    if os.path.isdir(ENVOI):
+        im.save(os.path.join(ENVOI, fname), quality=92)
+        print("\u2713", fname, "(+ Envoyer \u00e0 Franck)")
+    else:
+        print("\u2713", fname, "(dossier d'envoi introuvable :", ENVOI, ")")
 
 
 def F(size, index=REG):
@@ -55,8 +68,16 @@ def track(d, x, y, txt, font, fill, sp=3):
     return x
 
 
-def story(image_path, titre, info, fname, highlight=None, descente=DESCENTE):
+def story(image_path, titre, info, fname, highlight=None, descente=DESCENTE,
+          sombre=0):
+    """sombre : voile noir uniforme posé AVANT le scrim, de 0 à 255. Sert quand la
+       photo est trop lumineuse pour que le texte tienne dessus, typiquement un
+       plein ciel. 70 assombrit sans éteindre les couleurs."""
     im = load(image_path)
+    if sombre:
+        im = Image.alpha_composite(
+            im.convert("RGBA"), Image.new("RGBA", (1080, 1920), (0, 0, 0, sombre))
+        ).convert("RGB")
     haut = 900 + descente                 # le scrim descend avec le texte
     ov = Image.new("RGBA", (1080, 1920), (0, 0, 0, 0))
     od = ImageDraw.Draw(ov)
@@ -96,8 +117,7 @@ def story(image_path, titre, info, fname, highlight=None, descente=DESCENTE):
     for line in wrap(info, fi, 880):
         d.text((90, y), line, font=fi, fill=(238, 244, 252))
         y += 48
-    im.save(os.path.join(OUT, fname), quality=92)
-    print("✓", fname)
+    enregistrer(im, fname)
 
 
 def liste(image_path, titre, sous_titre, items, fname, descente=DESCENTE):
@@ -143,8 +163,7 @@ def liste(image_path, titre, sous_titre, items, fname, descente=DESCENTE):
             d.text((180, yd + i * 42), line, font=fid, fill=INFO)
         if ysep:
             d.rectangle([180, ysep + descente, 990, ysep + descente], fill=BLANC)
-    im.save(os.path.join(OUT, fname), quality=92)
-    print("✓", fname)
+    enregistrer(im, fname)
 
 
 # (chemin image sous ~/Franck, TITRE, texte, sortie, [mot à surligner]).
@@ -175,6 +194,63 @@ STORIES = [
      "la chaleur des Bouches-du-Rhône.",
      "S-SANS-LIMITE.jpg"),
 ]
+
+# 21/09/2026 — Série de huit stories, retouchée trois fois sur les retours de
+# Lilian. Photos : Mickaël pour Ansart et pour la villa impian, Gabrielle
+# Voinot pour Gruter et Ramirez.
+A = os.path.join(FRANCK, "projet Ansart/Selection Franck Ansart Eliot")
+STORIES += [
+    (os.path.join(A, "_ECD7994.jpg"), "L'air ne reste pas bloqué dessous",
+     "Nos pergolas s'inspirent des pergolas méditerranéennes, où la "
+     "circulation d'air fait partie de la conception.\nL'air circule entre les "
+     "carrelets au lieu de rester bloqué sous un toit plein.",
+     "S-AIR-CIRCULE.jpg"),
+    (os.path.join(A, "_ECD7870.jpg"), "L'ombre ne s'arrête pas à la table",
+     "La structure se dessine à la longueur de votre terrasse, et ici elle "
+     "court sur toute la façade.\nVous n'avez pas un coin à l'ombre et le reste "
+     "au soleil, vous avez toute la terrasse.",
+     "S-OMBRE-SE-DEPLACE.jpg"),
+    (os.path.join(A, "_ECD8029.jpg"), "Ce que la pergola seule n'arrête pas",
+     "En fin d'après-midi, le soleil passe sous la couverture et vient vous "
+     "chercher de côté.\nC'est là que le claustra sert : il filtre ce soleil "
+     "rasant et le vis-à-vis, sans jamais enfermer l'espace.",
+     "S-SOLEIL-RASANT.jpg"),
+    (os.path.join(A, "_ECD7873.jpg"), "Le vis-à-vis, sans vous enfermer",
+     "Le claustra bois se pose en lames verticales ou horizontales, et nous "
+     "dessinons leur espacement selon ce que vous voulez cacher.\nIl vous met à "
+     "l'abri des regards sans fermer l'espace, donc vous gardez la lumière et "
+     "la vue sur votre jardin.",
+     "S-BOIS-DUR.jpg"),
+    # Photo choisie par Lilian le 21/09 : les montants fins devant la piscine.
+    (os.path.join(FRANCK, "New projet/Gruter Selection Franck/stmarc_gvt (114).jpg"),
+     "Pourquoi nos lignes sont aussi fines",
+     "L'acier est 3 à 5 fois plus rigide que l'aluminium massif, donc la "
+     "structure porte loin sans s'épaissir.\nC'est ce qui donne ces traits "
+     "nets, et une pergola qui ne s'impose pas devant la maison.",
+     "S-LIGNES-FINES.jpg"),
+    (os.path.join(G, "RAMIREZ/Selection Franck/_serign_gvoinot (17).jpg"),
+     "Adossée à la maison, ou posée dans le jardin",
+     "Adossée, elle prolonge votre pièce de vie et l'ombre commence dès que "
+     "vous ouvrez la baie.\nAutoportée, elle crée un lieu supplémentaire, "
+     "ailleurs dans le jardin, là où vous avez envie de vous asseoir.",
+     "S-ADOSSEE-AUTOPORTEE.jpg"),
+    (os.path.join(G, "Gruter/Gruter Selection Franck/stmarc_gvt (130).jpg"),
+     "Vous avez déjà un pool house",
+     "Un local en dur, souvent à toit plat et ouvert sur un ou deux côtés, mais "
+     "pourtant le soleil entre quand même sous le pool house, et vous avez trop "
+     "chaud.\n\nNous adossons la pergola au bâti existant, donc la surface à l'abri "
+     "du soleil et de la chaleur s'étend sur toute la terrasse.",
+     "S-POOL-HOUSE.jpg"),
+    (os.path.join(V, "_LVM1653.jpg"), "Un puits de lumière",
+     "Une partie du toit de la pergola reste ouverte, sans carrelets en bois "
+     "exotique, et la lumière éclaire votre maison.\nVous gardez l'ombre sur la "
+     "table, et la lumière d'éclairer votre maison (très utile pour les pergolas "
+     "XL comme celle-ci).",
+     "S-PUITS-DE-LUMIERE.jpg"),
+]
+
+# Photos à assombrir avant le scrim (fichier de sortie → force du voile).
+SOMBRE = {"S-PUITS-DE-LUMIERE.jpg": 70, "S-POOL-HOUSE.jpg": 45}
 
 # Story #13, la seule en mise en page « liste ».
 LISTES = [
@@ -207,7 +283,7 @@ if __name__ == "__main__":
             print("   ", a[4])
     for args in STORIES:
         if args[3] in voulus:
-            story(*args)
+            story(*args, sombre=SOMBRE.get(args[3], 0))
     for args in LISTES:
         if args[4] in voulus:
             liste(*args)
