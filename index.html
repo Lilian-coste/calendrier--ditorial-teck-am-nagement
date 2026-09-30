@@ -598,6 +598,17 @@ const STATUS = {
 const KEY="teck_ig_cal_v10";
 let state = JSON.parse(localStorage.getItem(KEY) || "{}");
 POSTS.forEach(p=>{ if(!state[p.id]) state[p.id]={status:p.status, date:p.date||"", heure:p.heure||""}; });
+// Passage automatique en « publié » (30/09/2026) : un post ou une story « à publier » ou
+// « planifié » dont l'heure de parution est passée s'affiche comme publié. Les reels, et ce
+// qui est encore « à produire », ne bougent pas. Le fichier garde « à publier » tant que ce
+// n'est pas paru, pour que scripts/rappels-publication.mjs continue d'envoyer les rappels.
+function dejaParu(e){
+  if(!e.date || !e.heure) return false;
+  const [h,m] = e.heure.split("h").map(n=>parseInt(n||"0",10));
+  return new Date(`${e.date}T${String(h).padStart(2,"0")}:${String(m||0).padStart(2,"0")}:00`) <= new Date();
+}
+POSTS.forEach(p=>{ const e=state[p.id];
+  if(p.type!=="reel" && (e.status==="apublier"||e.status==="planifie") && dejaParu(e)) e.status="publie"; });
 function save(){ localStorage.setItem(KEY, JSON.stringify(state)); }
 function st(p){ return state[p.id]; }
 
