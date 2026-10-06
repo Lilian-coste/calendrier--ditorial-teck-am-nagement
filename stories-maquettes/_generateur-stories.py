@@ -253,7 +253,7 @@ STORIES += [
 # les réseaux). Aucune photo des pergolas exposées chez Maison St Sa ou Espi n'existe : on
 # prend une vue assise sous la pergola de la villa Impian (Mickaël), sans l'ouverture du toit.
 STORIES += [
-    (os.path.join(V, "_LVM1651.jpg"), "Voir votre pergola avant de signer",
+    (os.path.join(V, "_LVM1651.jpg"), "Voir une pergola\nTeck Aménagement\navant de signer",
      "Nos pergolas sont exposées chez Maison St Sa, à Aix-en-Provence, et chez "
      "Meubles Espi, à Salon-de-Provence.\nVous pouvez vous asseoir dessous, toucher "
      "le bois et voir la finesse de la structure avant de vous décider.",
