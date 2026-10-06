@@ -555,8 +555,11 @@ Autoportée, elle crée un lieu supplémentaire, ailleurs dans le jardin, là o�
 En fin d'après-midi, le soleil passe sous la couverture et vient vous chercher de côté.
 C'est là que le claustra sert : il filtre ce soleil rasant et le vis-à-vis, sans jamais enfermer l'espace.` },
 
-  { id:"spuits", type:"story", num:21, img:"stories-maquettes/S-PUITS-DE-LUMIERE.jpg", angle:"Un puits de lumière",
-    status:"apublier", date:"2026-10-15", heure:"18h00",
+  /* Retirée le 06/10/2026 : Franck préfère ne pas parler du puits de lumière sur les réseaux
+     (concurrence). Bloquée aussi dans teck-instagram/content-pipeline/queue.json. Sujet de
+     remplacement à choisir. */
+  { id:"spuits", type:"story", num:21, img:"stories-maquettes/S-PUITS-DE-LUMIERE.jpg", angle:"⛔ RETIRÉE · sujet de remplacement à choisir",
+    status:"atrancher", date:"2026-10-15", heure:"18h00",
     cap:`UN PUITS DE LUMIÈRE
 
 Une partie du toit de la pergola reste ouverte, sans carrelets en bois exotique, et la lumière éclaire votre maison.
@@ -595,7 +598,8 @@ const STATUS = {
 // les stories suivantes gardant leurs numéros.
 // v10 (30/09/2026) : tout ce qui est paru jusqu'au 30/09 passe en « publié » (Lilian).
 // Les reels restent « à produire ».
-const KEY="teck_ig_cal_v10";
+// v11 (06/10/2026) : la story du 15/10 « Un puits de lumière » passe « à trancher ».
+const KEY="teck_ig_cal_v11";
 let state = JSON.parse(localStorage.getItem(KEY) || "{}");
 POSTS.forEach(p=>{ if(!state[p.id]) state[p.id]={status:p.status, date:p.date||"", heure:p.heure||""}; });
 // Passage automatique en « publié » (30/09/2026) : un post ou une story « à publier » ou
