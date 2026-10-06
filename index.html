@@ -555,15 +555,14 @@ Autoportée, elle crée un lieu supplémentaire, ailleurs dans le jardin, là o�
 En fin d'après-midi, le soleil passe sous la couverture et vient vous chercher de côté.
 C'est là que le claustra sert : il filtre ce soleil rasant et le vis-à-vis, sans jamais enfermer l'espace.` },
 
-  /* Retirée le 06/10/2026 : Franck préfère ne pas parler du puits de lumière sur les réseaux
-     (concurrence). Bloquée aussi dans teck-instagram/content-pipeline/queue.json. Sujet de
-     remplacement à choisir. */
-  { id:"spuits", type:"story", num:21, img:"stories-maquettes/S-PUITS-DE-LUMIERE.jpg", angle:"⛔ RETIRÉE · sujet de remplacement à choisir",
-    status:"atrancher", date:"2026-10-15", heure:"18h00",
-    cap:`UN PUITS DE LUMIÈRE
+  /* 06/10/2026 : remplace « Un puits de lumière », retirée parce que Franck ne veut pas en
+     parler sur les réseaux (concurrence). */
+  { id:"svoir", type:"story", num:21, img:"stories-maquettes/S-VOIR-AVANT-DE-SIGNER.jpg", angle:"Voir votre pergola avant de signer",
+    status:"apublier", date:"2026-10-15", heure:"18h00",
+    cap:`VOIR VOTRE PERGOLA AVANT DE SIGNER
 
-Une partie du toit de la pergola reste ouverte, sans carrelets en bois exotique, et la lumière éclaire votre maison.
-Vous gardez l'ombre sur la table, et la lumière d'éclairer votre maison (très utile pour les pergolas XL comme celle-ci).` },
+Nos pergolas sont exposées chez Maison St Sa, à Aix-en-Provence, et chez Meubles Espi, à Salon-de-Provence.
+Vous pouvez vous asseoir dessous, toucher le bois et voir la finesse de la structure avant de vous décider.` },
 
   { id:"spool", type:"story", num:22, img:"stories-maquettes/S-POOL-HOUSE.jpg", angle:"Vous avez déjà un pool house",
     status:"apublier", date:"2026-10-19", heure:"18h00",
@@ -599,7 +598,8 @@ const STATUS = {
 // v10 (30/09/2026) : tout ce qui est paru jusqu'au 30/09 passe en « publié » (Lilian).
 // Les reels restent « à produire ».
 // v11 (06/10/2026) : la story du 15/10 « Un puits de lumière » passe « à trancher ».
-const KEY="teck_ig_cal_v11";
+// v12 (06/10/2026) : la story du 15/10 devient « Voir votre pergola avant de signer ».
+const KEY="teck_ig_cal_v12";
 let state = JSON.parse(localStorage.getItem(KEY) || "{}");
 POSTS.forEach(p=>{ if(!state[p.id]) state[p.id]={status:p.status, date:p.date||"", heure:p.heure||""}; });
 // Passage automatique en « publié » (30/09/2026) : un post ou une story « à publier » ou

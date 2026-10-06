@@ -249,8 +249,19 @@ STORIES += [
      "S-PUITS-DE-LUMIERE.jpg"),
 ]
 
+# 06/10/2026 — Remplace « Un puits de lumière » (retirée : Franck ne veut pas en parler sur
+# les réseaux). Aucune photo des pergolas exposées chez Maison St Sa ou Espi n'existe : on
+# prend une vue assise sous la pergola de la villa Impian (Mickaël), sans l'ouverture du toit.
+STORIES += [
+    (os.path.join(V, "_LVM1651.jpg"), "Voir votre pergola avant de signer",
+     "Nos pergolas sont exposées chez Maison St Sa, à Aix-en-Provence, et chez "
+     "Meubles Espi, à Salon-de-Provence.\nVous pouvez vous asseoir dessous, toucher "
+     "le bois et voir la finesse de la structure avant de vous décider.",
+     "S-VOIR-AVANT-DE-SIGNER.jpg"),
+]
+
 # Photos à assombrir avant le scrim (fichier de sortie → force du voile).
-SOMBRE = {"S-PUITS-DE-LUMIERE.jpg": 70, "S-POOL-HOUSE.jpg": 45}
+SOMBRE = {"S-PUITS-DE-LUMIERE.jpg": 70, "S-POOL-HOUSE.jpg": 45, "S-VOIR-AVANT-DE-SIGNER.jpg": 60}
 
 # Story #13, la seule en mise en page « liste ».
 LISTES = [
