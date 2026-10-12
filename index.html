@@ -549,7 +549,7 @@ Adossée, elle prolonge votre pièce de vie et l'ombre commence dès que vous ou
 Autoportée, elle crée un lieu supplémentaire, ailleurs dans le jardin, là où vous avez envie de vous asseoir.` },
 
   { id:"srasant", type:"story", num:20, img:"stories-maquettes/S-SOLEIL-RASANT.jpg", angle:"Ce que la pergola seule n'arrête pas",
-    status:"apublier", date:"2026-10-12", heure:"18h00",
+    status:"apublier", date:"2026-10-13", heure:"08h00",
     cap:`CE QUE LA PERGOLA SEULE N'ARRÊTE PAS
 
 En fin d'après-midi, le soleil passe sous la couverture et vient vous chercher de côté.
@@ -599,7 +599,7 @@ const STATUS = {
 // Les reels restent « à produire ».
 // v11 (06/10/2026) : la story du 15/10 « Un puits de lumière » passe « à trancher ».
 // v12 (06/10/2026) : la story du 15/10 devient « Voir votre pergola avant de signer ».
-const KEY="teck_ig_cal_v12";
+const KEY="teck_ig_cal_v13";
 let state = JSON.parse(localStorage.getItem(KEY) || "{}");
 POSTS.forEach(p=>{ if(!state[p.id]) state[p.id]={status:p.status, date:p.date||"", heure:p.heure||""}; });
 // Passage automatique en « publié » (30/09/2026) : un post ou une story « à publier » ou
