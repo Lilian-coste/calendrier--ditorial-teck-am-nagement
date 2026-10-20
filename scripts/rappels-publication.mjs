@@ -65,6 +65,19 @@ const RAPPELS = [
   { minutes: 10, libelle: "dans 10 min" },
 ];
 
+/**
+ * Rappels sur mesure, pour une publication que Lilian fait à la main (19/10/2026,
+ * story vidéo de Romy) : une entrée du calendrier peut porter `rappels: [minutes…]`,
+ * qui remplace les deux rappels ci-dessus, et `manuel: "texte"`, affiché en tête de
+ * l'email. Exemple : 1980 = la veille à 9h pour une publication à 18h.
+ */
+function libelleDe(minutes) {
+  if (minutes >= 1440) return "demain";
+  if (minutes === 0) return "maintenant";
+  if (minutes >= 60 && minutes % 60 === 0) return `dans ${minutes / 60}h`;
+  return `dans ${minutes} min`;
+}
+
 /** Heure de cron théorique, en UTC. Doit rester identique à celle du workflow. */
 const CRON_HOUR_UTC = 3;
 
@@ -184,7 +197,10 @@ function rappelsDeLaFenetre(posts, debutFenetre, finFenetre, maintenant) {
 
     const publication = instantDepuisParis(post.date, post.heure);
 
-    for (const rappel of RAPPELS) {
+    const liste = Array.isArray(post.rappels)
+      ? post.rappels.map((m) => ({ minutes: m, libelle: libelleDe(m) }))
+      : RAPPELS;
+    for (const rappel of liste) {
       const envoi = publication - rappel.minutes * 60000;
       if (envoi < debutFenetre || envoi >= finFenetre) continue;
       if (envoi <= maintenant) continue;
@@ -202,6 +218,7 @@ function rappelsDeLaFenetre(posts, debutFenetre, finFenetre, maintenant) {
 function sujet({ post, libelle }) {
   const e = ETIQUETTES[post.type];
   // Volontairement court : les objets d'email restent sous 32 caractères.
+  if (post.manuel) return `✋ À toi de publier, ${libelle}`;
   return `${e.icone} ${e.nom.split(" ")[0]} #${post.num} ${libelle}`;
 }
 
@@ -223,6 +240,9 @@ function corpsTexte({ post, publication, libelle }) {
     "",
   ];
 
+  if (post.manuel) {
+    lignes.push("⚠️ A PUBLIER TOI-MEME", post.manuel, "");
+  }
   if (post.cap) {
     lignes.push("--- Légende à copier ---", "", post.cap, "");
   }
@@ -251,6 +271,11 @@ function corpsHtml({ post, publication, libelle }) {
        )}</pre>`
     : "";
 
+  const manuel = post.manuel
+    ? `<div style="margin:0 0 20px;padding:14px 16px;background:#fff4e5;border:1px solid #f0c27a;border-radius:10px;font-size:15px;line-height:1.5">
+         <strong>⚠️ À publier toi-même</strong><br>${echapper(post.manuel)}</div>`
+    : "";
+
   const visuel = post.phLabel
     ? `<p style="margin:16px 0 0;font-size:14px;color:#6b6b6b">Visuel : ${echapper(post.phLabel)}</p>`
     : "";
@@ -265,6 +290,7 @@ function corpsHtml({ post, publication, libelle }) {
     <div style="padding:24px">
       <p style="margin:0 0 6px;font-size:17px;font-weight:600">${echapper(post.angle)}</p>
       <p style="margin:0 0 22px;font-size:14px;color:#6b6b6b">${echapper(quand)}</p>
+      ${manuel}
       ${legende}
       ${visuel}
       <p style="margin:24px 0 0">
