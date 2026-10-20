@@ -601,7 +601,7 @@ Jean-Luc Vinet` },
     status:"apublier", date:"2026-11-02", heure:"18h00",
     cap:`VOUS AVEZ DÉJÀ UN STORE BANNE
 
-Sa toile vous donne de l'ombre, mais elle est très fine, et la chaleur la traverse jusqu'à vous.
+Sa toile vous donne de l'ombre, mais ne vous protège pas de la chaleur.
 
 Adossée à votre maison, notre pergola place au-dessus de vous un bois exotique dense, que la chaleur ne traverse pas comme une toile.` },
 
@@ -617,7 +617,7 @@ C'est ce chiffre qui commande la portée de la structure, et non la taille de vo
     cap:`AUCUNE PERGOLA SUR CATALOGUE
 
 Chaque projet est dessiné pour un extérieur précis, avec sa surface, son orientation et sa façade.
-C'est pour ça que nous ne donnons aucun tarif sans connaître la superficie de votre terrasse.` },
+C'est pour ça que nous ne donnons aucun tarif sans connaître les caractéristiques de votre terrasse.` },
 
   { id:"saviromy", type:"story", num:29, img:"stories-maquettes/S-AVIS-ROMY-apercu.jpg", angle:"Avis vidéo · Romy (extrait de 15 s)",
     status:"apublier", date:"2026-11-12", heure:"18h00",
@@ -631,9 +631,9 @@ C'est pour ça que nous ne donnons aucun tarif sans connaître la superficie de 
 
 À publier à la main : l'automate ne publie que des images.` },
 
-  { id:"shauteur", type:"story", num:30, img:"stories-maquettes/S-HAUTEUR.jpg", angle:"Au moins 2,50 m sous la pergola",
+  { id:"shauteur", type:"story", num:30, img:"stories-maquettes/S-HAUTEUR.jpg", angle:"Au moins 2,50 m sous pergola",
     status:"apublier", date:"2026-11-16", heure:"18h00",
-    cap:`AU MOINS 2,50 M SOUS LA PERGOLA
+    cap:`AU MOINS 2,50 M SOUS PERGOLA
 
 Nous n'avons jamais posé de pergola à moins de 2,50 m de haut.
 Aucune norme ne l'impose : c'est une question de confort et d'esthétisme.` },
@@ -697,13 +697,13 @@ Fabienne Bongiovanni` },
 Sur place, la pose de votre pergola dure une dizaine de jours.
 Elle s'allonge s'il pleut, ou s'il faut d'abord couler une dalle ou réaliser votre terrasse.` },
 
-  { id:"scouleurfacade", type:"story", num:39, img:"stories-maquettes/S-COULEUR-FACADE.jpg", angle:"Une structure à la couleur de votre maison",
+  { id:"scouleurfacade", type:"story", num:39, img:"stories-maquettes/S-COULEUR-FACADE.jpg", angle:"Une teinte choisie pour votre maison",
     status:"apublier", date:"2026-12-17", heure:"18h00",
-    cap:`UNE STRUCTURE À LA COULEUR DE VOTRE MAISON
+    cap:`UNE TEINTE CHOISIE POUR VOTRE MAISON
 
-Ici, la structure reprend le blanc des murs.
+Ici, le blanc de la structure s'accorde aux murs.
 
-Elle se choisit parmi cinq familles de teintes, du blanc au corten, et la nuance exacte se décide avec vous en rendez-vous.` },
+Nous choisissons le coloris de votre pergola selon les matières et les couleurs de votre maison, pour qu'il reste en harmonie avec tout ce qui l'entoure.` },
 
   { id:"stableetcanape", type:"story", num:40, img:"stories-maquettes/S-TABLE-ET-CANAPE.jpg", angle:"Un déjeuner qui dure tout l'après-midi",
     status:"apublier", date:"2026-12-21", heure:"18h00",
@@ -764,7 +764,8 @@ const STATUS = {
 // v11 (06/10/2026) : la story du 15/10 « Un puits de lumière » passe « à trancher ».
 // v12 (06/10/2026) : la story du 15/10 devient « Voir votre pergola avant de signer ».
 // v14 (19/10/2026) : 21 stories du 22/10 au 31/12 (commande /stories-teck).
-const KEY="teck_ig_cal_v14";
+// v15 (20/10/2026) : 4 stories corrigées sur les annotations de Franck (02/11, 09/11, 16/11, 17/12).
+const KEY="teck_ig_cal_v15";
 let state = JSON.parse(localStorage.getItem(KEY) || "{}");
 POSTS.forEach(p=>{ if(!state[p.id]) state[p.id]={status:p.status, date:p.date||"", heure:p.heure||""}; });
 // Passage automatique en « publié » (30/09/2026) : un post ou une story « à publier » ou

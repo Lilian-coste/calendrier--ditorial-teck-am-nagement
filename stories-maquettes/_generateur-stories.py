@@ -283,8 +283,9 @@ STORIES += [
      "rester à table quand la chaleur fait rentrer tout le monde.",
      "S-RESTER-DEHORS.jpg"),
     (os.path.join(V, "_LVM1636.jpg"), "Vous avez déjà un store banne",
-     "Sa toile vous donne de l'ombre, mais elle est très fine, et la chaleur la traverse "
-     "jusqu'à vous.\n\nAdossée à votre maison, notre pergola place au-dessus de vous un bois "
+     # 20/10/2026, annotation de Franck relayée par Lilian : « mais ne vous protège pas de la chaleur ».
+     "Sa toile vous donne de l'ombre, mais ne vous protège pas de la chaleur."
+     "\n\nAdossée à votre maison, notre pergola place au-dessus de vous un bois "
      "exotique dense, que la chaleur ne traverse pas comme une toile.",
      "S-STORE-BANNE.jpg"),
     (os.path.join(SP, "annema_teck_voinot (511).jpg"), "Combien serez-vous à table ?",
@@ -294,11 +295,11 @@ STORIES += [
      "S-COMBIEN-A-TABLE.jpg"),
     (os.path.join(P, "karine_gvt  (24).jpg"), "Aucune pergola sur catalogue",
      "Chaque projet est dessiné pour un extérieur précis, avec sa surface, son orientation "
-     "et sa façade.\nC'est pour ça que nous ne donnons aucun tarif sans connaître la "
-     "superficie de votre terrasse.",
+     "et sa façade.\nC'est pour ça que nous ne donnons aucun tarif sans connaître les "
+     "caractéristiques de votre terrasse.",  # Franck, 20/10/2026 (sens exact : question 25)
      "S-SANS-CATALOGUE.jpg"),
     # Texte de la hauteur posé dans le ciel, lignes resserrées (Lilian, 19/10/2026).
-    (os.path.join(A, "_ECD7875.jpg"), "Au moins 2,50 m sous la pergola",
+    (os.path.join(A, "_ECD7875.jpg"), "Au moins 2,50 m sous pergola",  # « la » retiré par Franck, 20/10/2026
      "Nous n'avons jamais posé de pergola à moins de 2,50 m de haut.\nAucune norme ne "
      "l'impose : c'est une question de confort et d'esthétisme.",
      "S-HAUTEUR.jpg"),
@@ -332,9 +333,15 @@ STORIES += [
      "pleut, ou s'il faut d'abord couler une dalle ou réaliser votre terrasse.",
      "S-DUREE-DE-POSE.jpg"),
     (os.path.join(G, "Daddi/le_rove_teckamenagement_g_voinot_2_bd/bd_rove_teck_gvoinot_7.jpg"),
-     "Une structure à la couleur de votre maison",
-     "Ici, la structure reprend le blanc des murs.\n\nElle se choisit parmi cinq familles "
-     "de teintes, du blanc au corten, et la nuance exacte se décide avec vous en rendez-vous.",
+     # 20/10/2026, Franck : « Les matières sont différentes du coup très compliqué d'avoir les
+     # mêmes coloris que la maison ». Donc « s'accorde », jamais « la même couleur ».
+     # Puis sa consigne, le même jour : « le coloris de nos structures [est] choisi en fonction
+     # des matières et des couleurs de leurs maisons », « nous privilégions des coloris en
+     # harmonie avec les éléments autour de la pergola ».
+     "Une teinte choisie pour votre maison",
+     "Ici, le blanc de la structure s'accorde aux murs.\n\nNous choisissons le coloris de votre "
+     "pergola selon les matières et les couleurs de votre maison, pour qu'il reste en harmonie "
+     "avec tout ce qui l'entoure.",
      "S-COULEUR-FACADE.jpg"),
     # Le déjeuner, pas le dîner, et pas un mot sur la pluie (Lilian, 19/10/2026).
     (os.path.join(RI, "riera_teck_gvt_33.jpg"), "Un déjeuner qui dure tout l'après-midi",
